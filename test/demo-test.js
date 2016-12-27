@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 var supertest = require('supertest');
-var server = require('../server');
+var server = require('../back/server');
 var User = require('../back/db/models').User;
 
 describe('Demo tests', () => {

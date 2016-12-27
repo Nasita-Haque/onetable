@@ -4,7 +4,7 @@
   "description": "Scaffolding for React, Node, Express, Sequelize projects",
   "main": "seed.js",
   "scripts": {
-    "start": "npm test & webpack --watch & nodemon server.js",
+    "start": "npm test & webpack --watch & nodemon start.js",
     "test": "mocha --watch"
   },
   "keywords": [],
