@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from 'jQuery';
-import Navbar from '../navbar/Navbar.jsx';
+import {Navbar} from '../index';
 
 const App = React.createClass({
   componentDidMount() {
