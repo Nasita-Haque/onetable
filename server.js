@@ -4,6 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const Sequelize = require('sequelize');
 const sequelizeConnection = require('./db');
+const environmentVariables = require('./back/env');
 
 //body-parser middleware adds .body property to req (if we make a POST AJAX request with some data attached, that data will be accessible as req.body)
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -16,5 +17,5 @@ app.get('/*', (req, res) => {
 
 //this if statement will prevent our express server and test server (using supertest) from trying to access the same port at the same time
 if (!module.parent) {
-   app.listen('2020', () => console.log('Listening on port 2020'));
+   app.listen(environmentVariables.PORT, () => console.log('Listening on port ' + environmentVariables.PORT));
 };
