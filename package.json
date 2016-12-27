@@ -4,8 +4,8 @@
   "description": "Scaffolding for React, Node, Express, Sequelize projects",
   "main": "seed.js",
   "scripts": {
-    "start": "webpack --watch & nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm test & webpack --watch & nodemon server.js",
+    "test": "mocha --watch"
   },
   "keywords": [],
   "author": "",
@@ -30,5 +30,10 @@
     "sequelize": "^3.27.0",
     "webpack": "^1.13.3",
     "webpack-livereload-plugin": "^0.9.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "supertest": "^2.0.1"
   }
 }

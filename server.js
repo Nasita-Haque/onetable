@@ -14,4 +14,7 @@ app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '/front/index.html'));
 });
 
-app.listen('5678', () => console.log('Listening on port 5678'));
+//this if statement will prevent our express server and test server (using supertest) from trying to access the same port at the same time
+if (!module.parent) {
+   app.listen('2020', () => console.log('Listening on port 2020'));
+};
