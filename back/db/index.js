@@ -6,11 +6,5 @@ const sequelizeConnection = new Sequelize('postgres://natemaddrey@localhost:5432
   logging: false
 });
 
-//Test to see if the connection worked
-sequelizeConnection
-.authenticate()
-.then((err) => console.log('Sequelize connection successful'))
-.catch((err) => console.log('Unable to connect to the database:', err));
-
 //export out the databsae connection to be used elsewhere (for example, creating models and accessing our database in our API)
 module.exports = sequelizeConnection;
