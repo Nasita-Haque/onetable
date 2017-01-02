@@ -10,24 +10,21 @@ module.exports = {
     devtoolFallbackModuleFilenameTemplate: '[resourcePath]?[hash]'
   },
   module: {
-    loaders: [
-      {
-        test: [/\.jsx?$/, /\.js?$/],
-        exclude: /(node_modules)/,
-        loader: 'babel',
-        query: {
-          presets: ['es2015', 'react']
-        }
-      },
-      {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader'
-      },
-    ]
+    loaders: [{
+      test: [/\.jsx?$/, /\.js?$/],
+      exclude: /(node_modules)/,
+      loader: 'babel',
+      query: {
+        presets: ['es2015', 'react']
+      }
+    }, {
+      test: /\.css$/,
+      loader: 'style-loader!css-loader'
+    }, ]
   },
   devtool: 'source-map',
   resolve: {
-    extensions: ["", ".js", ".jsx" ]
+    extensions: ["", ".js", ".jsx"]
   },
   plugins: [
     new LiveReloadPlugin()

@@ -1,8 +1,8 @@
 {
   "name": "access-code-generator",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Scaffolding for React, Node, Express, Sequelize projects",
-  "main": "seed.js",
+  "main": "start.js",
   "scripts": {
     "start": "npm test & webpack --watch & nodemon start.js",
     "test": "mocha --watch"
