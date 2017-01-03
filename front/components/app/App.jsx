@@ -9,7 +9,7 @@ const App = React.createClass({
       url: '/auth'
     })
     .done((username) => {
-      if(username) {
+      if(username && username[0] !== '<') {
         console.log(username + ' is logged in!');
         this.setState({username: username});
       } else {
