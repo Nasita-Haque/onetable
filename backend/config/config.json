@@ -2,21 +2,21 @@
   "development": {
     "username": "crazykiwi",
     "password": null,
-    "database": "one-table",
+    "database": "onetable",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "cr",
+    "username": "crazykiwi",
     "password": null,
-    "database": "one-table",
+    "database": "onetable",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "Ambar",
+    "username": "crazykiwi",
     "password": null,
-    "database": "one-table",
+    "database": "onetable",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
