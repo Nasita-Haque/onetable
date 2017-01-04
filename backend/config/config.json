@@ -1,22 +1,22 @@
 {
   "development": {
-    "username": "Ambar",
+    "username": "Deekknows",
     "password": null,
-    "database": "one-table",
+    "database": "onetable",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "Ambar",
+    "username": "Deekknows",
     "password": null,
-    "database": "one-table",
+    "database": "onetable",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "Ambar",
+    "username": "Deekknows",
     "password": null,
-    "database": "one-table",
+    "database": "onetable",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
