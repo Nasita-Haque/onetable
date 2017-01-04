@@ -3,5 +3,6 @@ node_modules
 *.log
 npm-debug.log*
 
-front/bundle
-back/env/development.js
+bundle.js
+bundle.js.map
+
