@@ -3,7 +3,6 @@ node_modules
 *.log
 npm-debug.log*
 
-bundle.js
-bundle.js.map
+frontend/public
 
 backend/config/config.json
