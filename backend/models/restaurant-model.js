@@ -1,9 +1,9 @@
 "use strict";
 
 module.exports = function(sequelize, DataTypes) {
-  var restaurant = sequelize.define("Restaurant", {
+  var Restaurant = sequelize.define("Restaurant", {
     name: DataTypes.TEXT,
-    address: DataTypes.Text,
+    address: DataTypes.TEXT,
     state: DataTypes.STRING,
     lat: DataTypes.INTEGER,
     lng: DataTypes.INTEGER,
@@ -17,7 +17,7 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        Restaraunt.hasMany(models.Reservation)
+        Restaurant.hasMany(models.Reservation)
       }
     }
   });
