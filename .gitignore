@@ -6,3 +6,4 @@ npm-debug.log*
 frontend/public
 
 backend/config/config.json
+.ds_Store
