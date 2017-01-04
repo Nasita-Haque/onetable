@@ -1,4 +1,4 @@
 module.exports = {
-  "DATABASE_URI": "postgres://natemaddrey@localhost:5432/access-code-generator",
+  "DATABASE_URI": "postgres://Chanice@localhost:5432/access-code-generator",
   "PORT": "2020",
 };
