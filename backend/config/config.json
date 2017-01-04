@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "Ambar",
+    "password": null,
+    "database": "one-table",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "Ambar",
+    "password": null,
+    "database": "one-table",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "Ambar",
+    "password": null,
+    "database": "one-table",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
