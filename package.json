@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack -w & nodemon server.js"
+    "start": "npm test & webpack --watch & nodemon server.js",
+    "test": "mocha --watch"
   },
   "keywords": [],
   "author": "",
@@ -18,14 +18,17 @@
     "babel-preset-react": "^6.16.0",
     "bcrypt": "^1.0.2",
     "body-parser": "*",
+    "chai": "^3.5.0",
     "express": "*",
     "jquery": "^3.1.1",
+    "mocha": "^3.2.0",
     "pg": "*",
     "pg-hstore": "*",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
     "sequelize": "*",
     "sequelize-cli": "*",
+    "supertest": "^2.0.1",
     "webpack": "^1.14.0"
   }
 }
