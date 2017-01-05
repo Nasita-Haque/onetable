@@ -3,7 +3,7 @@
 var bcrypt = require('bcrypt');
 
 module.exports = function(sequelize, DataTypes){
-var User = sequelize.define('user', {
+var User = sequelize.define('User', {
   firstname: {
     type: DataTypes.STRING,
     valdate: {
@@ -29,7 +29,11 @@ var User = sequelize.define('user', {
     }
   }
 }, {
-  classMethods: {}
+  classMethods: {
+    associate: function(models){
+      User.hasMany(models.Reservation)
+    }
+  }
 }, {
     freezeTableName: true,
     instanceMethods: {
@@ -41,6 +45,5 @@ var User = sequelize.define('user', {
     }
   }
 })
-
 return User;
 }
