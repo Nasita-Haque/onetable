@@ -13,10 +13,9 @@ router.route('/restaurant')
 	})
 	})
 
-
 router.route('/restaurant')
 	.post((req,res)=>{
-		models.Restaurant.Create({
+		models.Restaurant.create({
 			name: req.body.name,
 		    address: req.body.address,
 		    state: req.body.state,
