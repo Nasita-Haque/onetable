@@ -31,7 +31,9 @@ var User = sequelize.define('User', {
 }, {
   classMethods: {
     associate: function(models){
-      User.hasMany(models.Reservation)
+      User.belongsToMany(models.OpenTable, {
+        through: "Reservations"
+      })
     }
   }
 }
