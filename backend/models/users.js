@@ -46,6 +46,7 @@ var User = sequelize.define('User', {
             return bcrypt.compareSync(password, this.password);
     }
   }
-})
+}
+)
 return User;
 }
