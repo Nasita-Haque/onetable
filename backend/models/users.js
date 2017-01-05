@@ -34,7 +34,8 @@ var User = sequelize.define('User', {
       User.hasMany(models.Reservation)
     }
   }
-}, {
+}, 
+{
     freezeTableName: true,
     instanceMethods: {
         generateHash: function(password) {
