@@ -1,8 +1,8 @@
 const User = require('./route-users');
-const Reservation = reuire('./route-reservations');
-const Restaurant = require('./route-restaurant');
+const Reservation = require('./route-reservations');
+const Restaurant = require('./route-restaurants');
 
-module.exports = function(req, res) {
+module.exports = {
   routes: {
     User,
     Reservation,

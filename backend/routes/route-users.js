@@ -1,44 +1,52 @@
-const express  = require('express');
-const router = express.Router();
-const app = express();
-const bodyParser = require('bodyParser');
-const User = require('../models');
+const router = require('express').Router();
+const db = require('../models');
 
-app.use(bodyParser.urlencoded({extended: true}))
 
-router.route('/api/users')
+router.route('/users')
   .get((req, res) => {
-    User.findAll()
+    models.User.findAll()
     .then((users) => {
       res.send(users)
+    })
+    .catch((err) => {
+      res.status(500).send('api error')
+      console.log('error: ',err)
     })
   })
   .post((req, res) => {
     const data = req.body
-    User.create({
+    models.User.Create({
       firstname: data.firstname,
       lastname: data.lastname,
       email: data.lastname,
       password: data.password
     })
-    .then(
-      res.send('user was created')
-    )
+    .then((userInfo) => {
+      res.send(userInfo)
+    })
+    .catch((err) => {
+      res.status(500).send('api error')
+      console.log('error: ',err)
+    })
   })
 router.route('/api/user/:id')
   .put((req, res) => {
     const data = req.body
-    User.update({
+    modules.User.update({
       firstname: data.firstname,
       lastname: data.lastname,
       email: data.lastname,
       password: data.password
     }, {
-      where: {
-        id: req.params.id
-      }
-      .then(
-        res.send('user updated')
-      )
+      where: {id: req.params.id}
+      })
+    .then((userInfo) => {
+      res.send(userInfo)
+    })
+    .catch((err) => {
+      res.status(500).send('api error')
+      console.log('error: ',err)
     })
   })
+
+module.exports = router

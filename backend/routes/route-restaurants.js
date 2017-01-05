@@ -1,10 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../models/index.js');
 const models = require('../models');
-const app = express();
-const bodyParser = require('bodyParser');
-
-app.use(bodyparser.urlencoded({ extended: false }));
 
 router.route('/restaurant')
 	.get((req,res)=>{
@@ -45,4 +41,3 @@ router.route('/restaurant')
 	})
 
 module.exports = router;
-
