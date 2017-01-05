@@ -20,5 +20,5 @@ Authentication (aka login) is mostly setup, but still missing a couple key parts
 
 You can see AJAX calls for these routes in the `Login.jsx` and `App.jsx` components
 
-# Opentable
+# Onetable
 A reservation site for small and local businesses. 
