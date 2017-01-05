@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const db = require('../models');
+const sequelize = require('../models/index')
+const models = require('../models');
 
 
 router.route('/users')
@@ -15,7 +16,7 @@ router.route('/users')
   })
   .post((req, res) => {
     const data = req.body
-    models.User.Create({
+    models.User.create({
       firstname: data.firstname,
       lastname: data.lastname,
       email: data.lastname,
@@ -29,10 +30,10 @@ router.route('/users')
       console.log('error: ',err)
     })
   })
-router.route('/api/user/:id')
+router.route('/user/:id')
   .put((req, res) => {
     const data = req.body
-    modules.User.update({
+    models.User.update({
       firstname: data.firstname,
       lastname: data.lastname,
       email: data.lastname,
