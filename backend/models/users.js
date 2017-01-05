@@ -35,18 +35,18 @@ var User = sequelize.define('User', {
     }
   }
 }
-, 
-{
-    freezeTableName: true,
-    instanceMethods: {
-        generateHash: function(password) {
-            return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
-        },
-        validPassword: function(password) {
-            return bcrypt.compareSync(password, this.password);
-    }
-  }
-}
+// , 
+// {
+//     freezeTableName: true,
+//     instanceMethods: {
+//         generateHash: function(password) {
+//             return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+//         },
+//         validPassword: function(password) {
+//             return bcrypt.compareSync(password, this.password);
+//     }
+//   }
+// }
 )
 return User;
 }
