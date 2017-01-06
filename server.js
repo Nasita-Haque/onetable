@@ -26,5 +26,4 @@ db.sequelize.sync().then(() => {
 })
 
 //EXPORT FOR TESTING
-//CHANICE
 module.exports = app; 
