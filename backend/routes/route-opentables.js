@@ -34,11 +34,11 @@ router.route('/opentable')
 router.route('/opentable/:id')
 	.put((req, res) => {
 		let newDate 
-		let momentDate = () => {
-			newDate = moment(req.body.date).format("YYYY M D")
+		let momentDate = (date) => {
+			newDate = moment(date).format("YYYY M D")
 			return newDate
 			}
-			momentDate(newDate);
+			momentDate(req.body.date);
 		OpenTable.update({
 				date: newDate,
 				time:req.body.time
@@ -46,6 +46,9 @@ router.route('/opentable/:id')
 				where: {
 					id: req.params.id
 				}
+			})	
+		.then(()=>{
+			return OpenTable.findById(req.params.id)
 		})
 		.then(data => res.send(data))
 		.catch(error =>  res.status(500).send('Something broke when updating!'))
