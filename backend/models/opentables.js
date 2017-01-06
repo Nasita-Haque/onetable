@@ -2,8 +2,13 @@
 
 module.exports = function(sequelize, DataTypes){
   var OpenTable = sequelize.define("OpenTable", {
-    date: DataTypes.STRING,
-    time: DataTypes.STRING,
+    date:{
+     type: DataTypes.DATEONLY,
+     validate: {
+      isDate:true
+     }
+   },
+    time: DataTypes.TIME,
     availability: {type: DataTypes.BOOLEAN, defaultValue: true}
   }, {
     classMethods: {

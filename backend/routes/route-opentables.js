@@ -6,19 +6,17 @@ const moment = require("moment")
 ///ROUTES//& FUNCTION//
 ///////////////////////
 router.route('/opentable')
+	///GET///
 	.get((req,res) => {
 		OpenTable.findAll()
 			.then(data => res.send(data))
 			.catch(error =>  res.status(500).send('Something broke when getting!'))
 	})
+	///POST///
 	.post((req,res) => {
 			let newDate 
-			let newTime;
-			let date = req.body.date
-			let time = req.body.time
-			let momentDate = (date) => {
-				newDate = moment(date).format("YYYY M D")
-				console.log(newDate)
+			let momentDate = () => {
+				newDate = moment(req.body.date).format("YYYY M D")
 				return newDate
 			}
 			momentDate(newDate);
@@ -32,10 +30,22 @@ router.route('/opentable')
 		 console.log(error)
 		})	
 	})
+	///PUT///
+router.route('/opentable/:id')
 	.put((req, res) => {
+		let newDate 
+		let momentDate = () => {
+			newDate = moment(req.body.date).format("YYYY M D")
+			return newDate
+			}
+			momentDate(newDate);
 		OpenTable.update({
-			date: req.body.date,
-			time:req.body.time
+				date: newDate,
+				time:req.body.time
+			}, {
+				where: {
+					id: req.params.id
+				}
 		})
 		.then(data => res.send(data))
 		.catch(error =>  res.status(500).send('Something broke when updating!'))
