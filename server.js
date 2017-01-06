@@ -11,7 +11,8 @@ app.use(express.static('public'))
 
 //BACKEND ROUTES
 app.use('/api', indexRouter.Restaurant);
-app.use('/api', indexRouter.User)
+app.use('/api', indexRouter.User);
+app.use('/api', indexRouter.OpenTable)
 
 //FRONTEND ROUTES
 app.get('/*', function(req, res) {
