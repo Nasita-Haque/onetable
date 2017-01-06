@@ -1,3 +1,5 @@
+'use strict'
+
 let expect = require('chai').expect;
 let supertest = require('supertest');
 let server = require('../server');
@@ -26,7 +28,7 @@ xit(`'/api/restaurant' should post a new user`, (done)=>{
 		.post('/api/restaurant')
 		.type('form')
 		.send({name: 'Restaurant16' , address: 'address14', state: 'state14', lat: '1234', lng: '1234', city: 'city14', zipcode: '1234', price: 'price14', phone_number: '1234', cuisine: 'cuisine14', img_url: 'imgURl14', website_url:'websiteURl14'})
-		.end((err, res)=>{ 
+		.end((err, res)=>{
 			expect(res.body).exist
 			expect(res.body).to.be.a('object');
 			expect(res).to.have.status(200);
@@ -35,4 +37,3 @@ xit(`'/api/restaurant' should post a new user`, (done)=>{
 		})
 	})
 });
-

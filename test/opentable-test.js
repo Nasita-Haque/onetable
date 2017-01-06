@@ -1,3 +1,4 @@
+'use strict'
 var expect = require('chai').expect;
 var supertest = require('supertest');
 var server = require('../server');
@@ -42,10 +43,7 @@ describe('Opentable test', () => {
 						expect(response.body).be.a('object')
 	        	expect(moment(response.body.date).format("YYYY M DD")).equal(resultdate);
 	        	done();
-						}) 
+						})
 					})
 			})
 })
-
-
-
