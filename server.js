@@ -7,7 +7,7 @@ const indexRouter = require('./backend/routes/index').routes
 
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json())
-app.use(express.static('public'))
+app.use(express.static(path.join(__dirname,'./frontend/public')))
 
 //BACKEND ROUTES
 app.use('/api', indexRouter.Restaurant);
