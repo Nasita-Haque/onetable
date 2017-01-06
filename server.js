@@ -24,3 +24,5 @@ db.sequelize.sync().then(() => {
   console.log("server running in 6789")
   app.listen(6789)
 })
+
+module.exports = app; 
