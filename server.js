@@ -25,4 +25,5 @@ db.sequelize.sync().then(() => {
   app.listen(6789)
 })
 
+//EXPORT FOR TESTING
 module.exports = app; 
