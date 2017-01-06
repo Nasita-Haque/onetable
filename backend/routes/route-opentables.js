@@ -1,3 +1,4 @@
+'use strict'
 const router = require('express').Router();
 const OpenTable = require('../models').OpenTable;
 const moment = require("moment")
@@ -14,7 +15,7 @@ router.route('/opentable')
 	})
 	///POST///
 	.post((req,res) => {
-			let newDate 
+			let newDate
 			let momentDate = () => {
 				newDate = moment(req.body.date).format("YYYY M D")
 				return newDate
@@ -28,12 +29,12 @@ router.route('/opentable')
 		.catch(error => {
 		 res.status(500).send('Something broke when creating!')
 		 console.log(error)
-		})	
+		})
 	})
 	///PUT///
 router.route('/opentable/:id')
 	.put((req, res) => {
-		let newDate 
+		let newDate
 		let momentDate = (date) => {
 			newDate = moment(date).format("YYYY M D")
 			return newDate
@@ -46,7 +47,7 @@ router.route('/opentable/:id')
 				where: {
 					id: req.params.id
 				}
-			})	
+			})
 		.then(()=>{
 			return OpenTable.findById(req.params.id)
 		})
