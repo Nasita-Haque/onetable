@@ -19,7 +19,7 @@ router.route('/users')
     models.User.create({
       firstname: data.firstname,
       lastname: data.lastname,
-      email: data.lastname,
+      email: data.email,
       password: data.password
     })
     .then((userInfo) => {

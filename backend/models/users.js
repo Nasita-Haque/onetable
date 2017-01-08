@@ -28,16 +28,7 @@ var User = sequelize.define('User', {
       len: [1, 50]
     }
   }
-}, {
-  classMethods: {
-    associate: function(models){
-      User.belongsToMany(models.OpenTable, {
-        through: "Reservations"
-      })
-    }
-  }
-}
-,
+}, 
 {
     freezeTableName: true,
     instanceMethods: {
