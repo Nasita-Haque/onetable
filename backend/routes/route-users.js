@@ -3,17 +3,34 @@ const sequelize = require('../models/index')
 const models = require('../models');
 
 
-router.route('/users')
-  .get((req, res) => {
-    models.User.findAll()
-    .then((users) => {
-      res.send(users)
-    })
-    .catch((err) => {
-      res.status(500).send('api error')
-      console.log('error: ',err)
-    })
+//validates a user
+//user needs username + password
+const validateUser = (req, res) => {
+  console.log(req.query)
+  User.findOne({
+    where: {
+      username: req.query.username,
+      password: req.query.password
+    }
   })
+  .then((data) => {
+    .then((data) => {
+    req.session.userID = data.id;
+    req.session.save();
+    console.log(req.session);
+    res.send(data);
+  })
+  .catch((err) => {
+    res.sendStatus(500)
+  })
+}
+  })
+
+
+
+
+router.route('/user')
+  //creates a new user
   .post((req, res) => {
     const data = req.body
     models.User.create({
@@ -30,7 +47,9 @@ router.route('/users')
       console.log('error: ',err)
     })
   })
+
 router.route('/user/:id')
+//updates an existing user
   .put((req, res) => {
     const data = req.body
     models.User.update({
