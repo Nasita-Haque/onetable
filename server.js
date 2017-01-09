@@ -13,6 +13,7 @@ app.use(express.static(path.join(__dirname,'./frontend/public')))
 app.use('/api', indexRouter.Restaurant);
 app.use('/api', indexRouter.User);
 app.use('/api', indexRouter.OpenTable)
+app.use('/api', indexRouter.Reservation)
 
 //FRONTEND ROUTES
 app.get('/*', function(req, res) {

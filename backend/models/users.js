@@ -28,7 +28,13 @@ var User = sequelize.define('User', {
       len: [1, 50]
     }
   }
-}, 
+}, {
+    classMethods: {
+      associate: function(models) {
+        User.hasMany(models.Reservation)
+      }
+    }
+  }, 
 {
     freezeTableName: true,
     instanceMethods: {

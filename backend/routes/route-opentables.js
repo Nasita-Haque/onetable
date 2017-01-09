@@ -14,7 +14,12 @@ router.route('/opentable')
 			.then(data => res.send(data))
 			.catch(error =>  res.status(500).send('Something broke when getting!'))
 	})
+
+router.route('/opentable/:restaurantID')	
 	///POST///
+	//Example: 
+		//date: 2017 5 17
+		//time: 11:00:00
 	.post((req,res) => {
 			let newDate 
 			let momentDate = () => {
@@ -24,7 +29,8 @@ router.route('/opentable')
 			momentDate(newDate);
 		OpenTable.create({
 			date: newDate ,
-			time: req.body.time
+			time: req.body.time,
+			RestaurantId: req.params.restaurantID
 		})
 		.then(data => res.send(data))
 		.catch(error => {
@@ -32,6 +38,7 @@ router.route('/opentable')
 		 console.log(error)
 		})	
 	})
+
 	///PUT///
 router.route('/opentable/:id')
 	.put((req, res) => {

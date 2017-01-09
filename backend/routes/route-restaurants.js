@@ -1,7 +1,8 @@
-
-
 const router = require('express').Router();
 const models = require('../models');
+
+//To enter a post, write i
+
 
 router.route('/restaurant')
 	.get((req,res)=>{
@@ -15,6 +16,20 @@ router.route('/restaurant')
 	})
 	})
 
+//POST
+	//EXAMPLE:
+	    // name: 
+	    // address: 
+	    // state: 
+	    // lat: 
+	    // lng: 
+	    // city: 
+	    // zipcode: 
+	    // price: 
+	    // phone_number: 
+	    // cuisine: 
+	    // img_url: 
+	    // website_url: 
 router.route('/restaurant')
 	.post((req,res)=>{
 		models.Restaurant.create({

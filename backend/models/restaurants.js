@@ -18,6 +18,7 @@ module.exports = function(sequelize, DataTypes) {
     classMethods: {
       associate: function(models) {
         Restaurant.hasMany(models.OpenTable)
+        Restaurant.hasMany(models.Reservation)
       }
     }
   });
