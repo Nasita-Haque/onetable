@@ -87,20 +87,13 @@ const updateUser = (req, res) => {
 ///ROUTES
 router.route('/validate')
   .get(validateUser)
-
 router.route('/validate/userid')
   .get(validateExistng)
-route.route('/user/:id')
+router.route('/user/:id')
   .get(getUserbyId)
-
-//creates a new user
-router.route('/user')
-
 router.route('/user')
   //creates a new user
   .post(newUser)
-
-
 router.route('/user/:id')
 //updates an existing user
   .put(updateUser)
