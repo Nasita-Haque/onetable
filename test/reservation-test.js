@@ -17,7 +17,7 @@ xit(`'/api/reservation' should respond with reservation info!`, (done) => {
 		.end((err, res) => {
 			expect(res).to.have.status(200);
 			expect(res.body).to.be.a('array');
-			expect(res.body[0]).to.have.property('state');
+			expect(res.body[0]).to.have.property('Restaurant');
 			expect(res.body[0].name).to.eql('Restaurant14');
 			done();
       	})

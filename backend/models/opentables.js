@@ -16,6 +16,7 @@ module.exports = function(sequelize, DataTypes){
     classMethods: {
       associate: function(models) {
         OpenTable.belongsTo(models.Restaurant)
+        OpenTable.hasMany(models.Reservation)
       }
     }
   })
