@@ -8,7 +8,7 @@ var User = require('../backend/models').User
 
 
 describe('User demo test', () => {
-  it(`/user will create a newuser`, (done) => {
+  xit(`/user will create a newuser`, (done) => {
     supertest(server)
     .post('/users')
     .send({firstname: 'testname1', lastname: 'testlast1', email: 'test1@gail.com', password: 'pass1'})
@@ -31,7 +31,7 @@ describe('User demo test', () => {
 
 
   //example of how to do a test to get all users route
-  it(`'/api/users' should respond with all users`, (done) => {
+  xit(`'/api/users' should respond with all users`, (done) => {
     supertest(server)
       .get('/api/users')
       .end((err, res) => {

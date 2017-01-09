@@ -8,9 +8,9 @@ module.exports = function(sequelize, DataTypes) {
     lat: DataTypes.INTEGER,
     lng: DataTypes.INTEGER,
     city: DataTypes.STRING,
-    zipcode: DataTypes.INTEGER,
+    zipcode: {type: DataTypes.INTEGER, validate: {len: [1, 99999]}},
     price: DataTypes.STRING,
-    phone_number: DataTypes.INTEGER,
+    phone_number: {type: DataTypes.BIGINT, validate: {len: [1, 9999999999]}},
     cuisine: DataTypes.STRING,
     img_url: DataTypes.STRING,
     website_url: DataTypes.STRING
