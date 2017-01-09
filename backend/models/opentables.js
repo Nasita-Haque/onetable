@@ -12,7 +12,8 @@ module.exports = function(sequelize, DataTypes){
       type:DataTypes.TIME
     },
     availability: {type: DataTypes.BOOLEAN, defaultValue: true}
-  }, {
+  },
+  {
     classMethods: {
       associate: function(models) {
         OpenTable.belongsTo(models.Restaurant)

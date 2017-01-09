@@ -1,9 +1,9 @@
 'use strict';
 
-// var bcrypt = require('bcrypt');
+var bcrypt = require('bcrypt');
 
-module.exports = function(sequelize, DataTypes){
-var User = sequelize.define('User', {
+module.exports = function(sequelize, DataTypes) {
+var User = sequelize.define('user', {
   firstname: {
     type: DataTypes.STRING,
     valdate: {
@@ -28,14 +28,10 @@ var User = sequelize.define('User', {
       len: [1, 50]
     }
   }
-}, {
-    classMethods: {
-      associate: function(models) {
-        User.hasMany(models.Reservation)
-      }
-    }
-  }, 
+},
 {
+  classMethods: {}
+}, {
     freezeTableName: true,
     instanceMethods: {
         generateHash: function(password) {
@@ -43,9 +39,9 @@ var User = sequelize.define('User', {
         },
         validPassword: function(password) {
             return bcrypt.compareSync(password, this.password);
-    }
-  }
 }
-)
+    }
+})
+
 return User;
 }
