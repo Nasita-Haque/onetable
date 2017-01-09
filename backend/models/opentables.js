@@ -5,15 +5,24 @@ module.exports = function(sequelize, DataTypes){
     date:{
      type: DataTypes.DATEONLY,
      validate: {
-      isDate:true
+      isDate:true,
+      require:true,
+      notNull:true
      }
    },
-    time: DataTypes.TIME,
+    time: {
+      type:DataTypes.TIME,
+      validate:{
+       require:true,
+       notNull:true
+      }
+    },
     availability: {type: DataTypes.BOOLEAN, defaultValue: true}
   }, {
     classMethods: {
       associate: function(models) {
         OpenTable.belongsTo(models.Restaurant)
+        OpenTable.hasMany(models.Reservation)
       }
     }
   })
