@@ -90,7 +90,7 @@ router.route('/validate')
 
 router.route('/validate/userid')
   .get(validateExistng)
-route.route('/user/:id')
+router.route('/user/:id')
   .get(getUserbyId)
 
 //creates a new user
