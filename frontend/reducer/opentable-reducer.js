@@ -15,3 +15,11 @@ const reducer = (state = _defaultState, action) => {
 }
 
 export default reducer;
+
+
+//TRACK
+//logged in 
+//save user in state--log save state,
+//track search, input or store in redux state, 
+//track of search results
+//clicked restaurant track that (date time)

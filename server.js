@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const session = require('express-session');
 const bodyparser = require("body-parser");
 const path = require('path');
 const db = require('./backend/models');
@@ -27,4 +28,4 @@ db.sequelize.sync().then(() => {
 })
 
 //EXPORT FOR TESTING
-module.exports = app; 
+module.exports = app;

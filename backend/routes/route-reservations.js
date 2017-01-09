@@ -40,7 +40,7 @@ router.route('/reservation/:userID/:opentableID')
 router.route('/reservation/:userID/:opentableID')
 	.post((req,res)=>{
 		models.Reservation.create({
-			RestaurantId: req.params.opentableID,
+			OpenTableId: req.params.opentableID,
 			UserId: req.params.userID
 		})
 	.then((restaurantInfo)=>{
