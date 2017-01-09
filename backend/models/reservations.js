@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes){
     classMethods: {
       associate: function(models) {
         Reservation.belongsTo(models.Restaurant)
-        Reservation.belongsTo(models.User)
+        // Reservation.belongsTo(models.User)
       }
     }
   })
