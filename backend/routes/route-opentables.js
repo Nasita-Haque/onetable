@@ -44,24 +44,25 @@ router.route('/opentable/:restaurantID')
 	///PUT///
 router.route('/opentable/:id')
 	.put((req, res) => {
-		let newDate
-		let momentDate = (date) => {
-			newDate = moment(date).format("YYYY M D")
-			return newDate
-		}
-		momentDate(req.body.date);
-		OpenTable.update({
-				date: newDate,
-				time:req.body.time
-				}, {
-				where: {
-					id: req.params.id
-				}
-			})
-		.then(()=>{
-			return OpenTable.findById(req.params.id)
-		})
-	.then(data => res.send(data))
+		// let newDate
+		// let momentDate = (date) => {
+		// 	newDate = moment(date).format("YYYY M D")
+		// 	return newDate
+		// }
+		// momentDate(req.body.date);
+		// OpenTable.update({
+		// 		date: newDate,
+		// 		time:req.body.time
+		// 		}, {
+		// 		where: {
+		// 			id: req.params.id
+		// 		}
+		// 	})
+		// .then(()=>{
+		// 	return OpenTable.findById(req.params.id)
+		// })
+		OpenTable.update(availability:false)
+	.then(data => res.status(200))
 	.catch(error =>  res.status(500).send('Something broke when updating!'))
 })
 
