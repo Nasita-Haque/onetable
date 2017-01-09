@@ -5,17 +5,11 @@ module.exports = function(sequelize, DataTypes){
     date:{
      type: DataTypes.DATEONLY,
      validate: {
-      isDate:true,
-      require:true,
-      notNull:true
+      isDate:true
      }
    },
     time: {
-      type:DataTypes.TIME,
-      validate:{
-       require:true,
-       notNull:true
-      }
+      type:DataTypes.TIME
     },
     availability: {type: DataTypes.BOOLEAN, defaultValue: true}
   }, {

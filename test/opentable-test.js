@@ -10,7 +10,7 @@ var moment = require("moment")
 chai.use(chaiHttp);
 
 describe('Opentable test', () => {
-	it('should GET reservations', (done) => {
+	xit('should GET reservations', (done) => {
 		supertest(server)
 		.get("/api/opentable")
 		.end((error, response) => {
