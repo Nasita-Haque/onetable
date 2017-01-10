@@ -1,5 +1,6 @@
 //COMPONENTS
 import App from './app/app.js';
+import Header from './home/header.js';
 import Signup from './signup.js';
 
 //REDUX
@@ -14,4 +15,4 @@ import OpenTableContainer from "../container/opentable-container.js"
 //EXPORT
 //Import by writing out filepath './components'
 //It will automatically redirect to index.js
-export {App, User, Routes, Store, OpenTableContainer};
+export {App, Header, Signup, Routes, Store, OpenTableContainer};
