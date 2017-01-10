@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const sequelize = require('../models/index')
-const models = require('../models');
+const User = require('../models').User;
 
 
 //validates a user
@@ -50,7 +50,7 @@ const validateExistng = (req, res) => {
 
 const newUser = (req, res) => {
   const data = req.body
-  models.User.create({
+  User.create({
     firstname: data.firstname,
     lastname: data.lastname,
     email: data.email,
@@ -67,7 +67,7 @@ const newUser = (req, res) => {
 //updates user
 const updateUser = (req, res) => {
   const data = req.body
-  models.User.update({
+  User.update({
     firstname: data.firstname,
     lastname: data.lastname,
     email: data.lastname,
