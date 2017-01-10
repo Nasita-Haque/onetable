@@ -8,7 +8,6 @@ import './App.css';
 ReactDOM.render(
 	<Provider store={Store}>
 		<Routes />
-	</Provider>, 
-	document.getElementById('root')	
+	</Provider>,
+	document.getElementById('root')
 );
-

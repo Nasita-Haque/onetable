@@ -1,5 +1,6 @@
 //COMPONENTS
 import App from './app/app.js';
+import Header from './home/header.js';
 import Signup from './signup.js';
 
 
@@ -18,4 +19,3 @@ import SignupContainer from "./container/signup-container.js"
 //It will automatically redirect to index.js
 
 export {App, User, Routes, Store, OpenTableContainer, Signup, SignupContainer};
-
