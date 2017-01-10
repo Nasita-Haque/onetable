@@ -5,7 +5,7 @@ import signup from "../reducer/signup-reducer.js"
 
 
 
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__  && window.__REDUX_DEVTOOLS_EXTENSION__() );
+const store = createStore(signup, window.__REDUX_DEVTOOLS_EXTENSION__  && window.__REDUX_DEVTOOLS_EXTENSION__() );
 
 
 export default store;
