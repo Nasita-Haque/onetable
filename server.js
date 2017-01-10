@@ -10,6 +10,7 @@ const indexRouter = require('./backend/routes/index').routes
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json())
 app.use(express.static(path.join(__dirname,'./frontend/public')))
+app.use(express.static(path.join(__dirname,'./frontend/styling')))
 
 
 //app.set('trust proxy', 1) // trust first proxy

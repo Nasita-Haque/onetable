@@ -1,4 +1,4 @@
 export const addUser = (data) => ({
-	type: "ADD_User",
+	type: "ADD_USER",
 	data
 })
