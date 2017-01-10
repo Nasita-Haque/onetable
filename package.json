@@ -35,7 +35,9 @@
     "sequelize": "*",
     "sequelize-cli": "*",
     "supertest": "^2.0.1",
-    "webpack": "^1.14.0"
+    "webpack": "^1.14.0",
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",

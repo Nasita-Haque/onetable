@@ -13,9 +13,10 @@ import Routes from './react-router/router.jsx';
 //CONTAINERS
 import SignupContainer from "../container/signup-container.js"
 import OpenTableContainer from "../container/opentable-container.js"
+import SignupContainer from "../container/signup-container.js"
 import confirmationContainer from "../container/confirmation-container.js"
 
 //EXPORT
 //Import by writing out filepath './components'
 //It will automatically redirect to index.js
-export {App, Routes, Store, Signup, SignupContainer, OpenTableContainer, confirmationContainer};
+export {App, Header, Routes, Store, Signup, SignupContainer, OpenTableContainer, confirmationContainer};
