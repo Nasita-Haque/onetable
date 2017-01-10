@@ -14,4 +14,4 @@ import OpenTableContainer from "../container/opentable-container.js"
 //EXPORT
 //Import by writing out filepath './components'
 //It will automatically redirect to index.js
-export {App, User, Routes, Store, OpenTableContainer};
+export {App, Signup, Routes, Store, OpenTableContainer};
