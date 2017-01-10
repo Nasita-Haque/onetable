@@ -1,10 +1,11 @@
 var axios = require('axios');
 const Restaurant = require('../models').Restaurant;
 
-console.log('Restaurant:', Restaurant)
+// curl -X GET --header "Accept: application/json" --header "user-key: 658841aac4d30aa7a55edff9500832d7" "https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city&count=50"
+
 
 axios.request({
-  url: 'https://developers.zomato.com/api/v2.1/search',
+  url: 'https://developers.zomato.com/api/v2.1/search?entity_id=280&entity_type=city&count=50',
   headers: {
     'user-key': '658841aac4d30aa7a55edff9500832d7'
   }
@@ -14,7 +15,6 @@ axios.request({
        {
         name: restaurant.restaurant.name,
         address: restaurant.restaurant.location.address,
-        state: restaurant.restaurant.location.state,
         lat: restaurant.restaurant.location.latitude,
         lng: restaurant.restaurant.location.longitude,
         city: restaurant.restaurant.location.city,
@@ -27,7 +27,6 @@ axios.request({
     ))
   ))
   .then((restaurants) => {
-    // console.log(restaurants)
     Restaurant.bulkCreate(restaurants)
   })
   .catch((err) => {
