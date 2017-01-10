@@ -1,6 +1,6 @@
 //COMPONENTS
 import App from './app/app.js';
-import User from './user.jsx';
+import Signup from './signup.js';
 
 //REDUX
 import Store from '../store/store.js'
