@@ -4,7 +4,7 @@ OpenTable.sync({force:true})
 //add the following three reservation to the database:
 // loop through and push the bulk object into each restaurant
 .then(() => {
-	for(var i = 1 ; i <= 2; i++){
+	for(var i = 1 ; i <= 20; i++){
 	OpenTable.bulkCreate([ 
   {date:"2016, 1, 9", time:"15:00:00", RestaurantId:i},
   {date:"2016, 1, 9", time:"16:00:00",  RestaurantId:i},

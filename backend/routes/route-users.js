@@ -1,7 +1,12 @@
 const router = require('express').Router();
 const sequelize = require('../models/index')
+<<<<<<< HEAD
 const models = require('../models');
 const { User } = models;
+=======
+const User = require('../models').User;
+
+>>>>>>> 68a7d3345386ec1092b2b22e5b7c402e32ce160e
 
 //validates a user
 //user needs username + password
@@ -57,6 +62,7 @@ const isAuthenticated = (req, res) => {
 
 const newUser = (req, res) => {
   const data = req.body
+<<<<<<< HEAD
   const { 
     firstname,
     lastname,
@@ -69,6 +75,13 @@ const newUser = (req, res) => {
     lastname,
     email,
     password
+=======
+  User.create({
+    firstname: data.firstname,
+    lastname: data.lastname,
+    email: data.email,
+    password: data.password
+>>>>>>> 68a7d3345386ec1092b2b22e5b7c402e32ce160e
   })
   .then((userInfo) => {
     res.send(userInfo)
