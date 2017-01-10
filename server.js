@@ -1,3 +1,4 @@
+'use strict'
 const express = require("express");
 const app = express();
 const session = require('express-session');
@@ -9,6 +10,16 @@ const indexRouter = require('./backend/routes/index').routes
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json())
 app.use(express.static(path.join(__dirname,'./frontend/public')))
+
+
+//app.set('trust proxy', 1) // trust first proxy
+app.use(session({
+  secret: 'serete key',//interal use to make use is secured
+  resave: true,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}))
+
 
 //BACKEND ROUTES
 app.use('/api', indexRouter.Restaurant);

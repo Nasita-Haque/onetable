@@ -1,24 +1,30 @@
 const router = require('express').Router();
 const sequelize = require('../models/index')
 const models = require('../models');
-
+const { User } = models;
 
 //validates a user
 //user needs username + password
 
-const validateUser = (req, res) => {
-  console.log(req.query)
+const authenticateUser = (req, res) => {
+  console.log("authenticateUser!!", req.query)
+  const { username, password} = req.query
+
   User.findOne({
     where: {
-      username: req.query.username,
-      password: req.query.password
+      username,
+      password
     }
   })
   .then((data) => {
-    req.session.userID = data.id;
-    req.session.save();
-    console.log(req.session);
-    res.send(data);
+    if(data){
+      req.session.userID = data.id;
+      req.session.save();
+      console.log(req.session);
+      res.send(data);
+    } else {
+      res.sendStatus(403)
+    }
   })
   .catch((err) => {
     res.sendStatus(500)
@@ -27,14 +33,15 @@ const validateUser = (req, res) => {
 
 //gets a user
 const getUserbyId = (req, res) => {
+  console.log("getUserbyId!!!!");
   User.findById(req.params.id)
   .then((data) => {
     res.send(data)
   })
 }
 
-//if the user already exist, it will be deredect
-const validateExistng = (req, res) => {
+//if the user already exist, it will be deredected
+const isAuthenticated = (req, res) => {
   console.log(req.session)
   if(req.session.userID){
     User.findById(req.session.userID)
@@ -50,11 +57,18 @@ const validateExistng = (req, res) => {
 
 const newUser = (req, res) => {
   const data = req.body
-  models.User.create({
-    firstname: data.firstname,
-    lastname: data.lastname,
-    email: data.email,
-    password: data.password
+  const { 
+    firstname,
+    lastname,
+    email,
+    password
+  } = data
+
+  User.create({
+    firstname,
+    lastname,
+    email,
+    password
   })
   .then((userInfo) => {
     res.send(userInfo)
@@ -67,10 +81,10 @@ const newUser = (req, res) => {
 //updates user
 const updateUser = (req, res) => {
   const data = req.body
-  models.User.update({
+  User.update({
     firstname: data.firstname,
     lastname: data.lastname,
-    email: data.lastname,
+    email: data.email,
     password: data.password
   }, {
     where: {id: req.params.id}
@@ -86,16 +100,16 @@ const updateUser = (req, res) => {
 
 ///ROUTES
 router.route('/validate')
-  .get(validateUser)
+  .get(authenticateUser)
 router.route('/validate/userid')
-  .get(validateExistng)
+  .get(isAuthenticated)
 router.route('/user/:id')
   .get(getUserbyId)
+//creates a new user
 router.route('/user')
-  //creates a new user
   .post(newUser)
-router.route('/user/:id')
 //updates an existing user
+router.route('/user/:id')
   .put(updateUser)
 
 module.exports = router
