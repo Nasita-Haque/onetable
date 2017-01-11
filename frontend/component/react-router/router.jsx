@@ -8,10 +8,10 @@ const Routes = (props) => (
 		<Route path='/' component={App}>
 		<IndexRoute component={Home} />
 			<Route path='/signup' component={SignupContainer} />
-			<Route path='/opentable' component={OpenTableContainer}/>
-			<Route path='/confirmation/:opentable' component={confirmationContainer} onEnter={store.dispatch(fetchOpentable)}/>
+			<Route path='/opentable/:RestaurantId' component={OpenTableContainer}/>
 		</Route>
 	</Router>
 );
 
 export default Routes;
+			// <Route path='/confirmation/:opentable' component={confirmationContainer} onEnter={store.dispatch(fetchOpentable)}/>
