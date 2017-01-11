@@ -5,19 +5,19 @@ const _defaultState = {
 	time:null
 }
 
-const reducer = (state = _defaultState, action) => {
+const confirmationReducer = (state = _defaultState, action) => {
 	switch(action.type){
 		case "ADD_DATE" :
 			let output = Object.assign({}, state)
 			output.date = action.date
 			return output
-		case "ADD_DATE" :
-			let output = Object.assign({}, state)
-			output.date = action.date
-			return output
-		default: 
+		// case "ADD_DATE" :
+		// 	// let output = Object.assign({}, state)
+		// 	output.date = action.date
+		// 	return output
+		default:
 			return state;
 	}
 }
 
-export default reducer;
+export default confirmationReducer;

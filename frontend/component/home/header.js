@@ -5,8 +5,8 @@ const Header = React.createClass({
   render() {
     return (
       <div className='header'>
-        <h2>LOGO</h2>
-        <h2>Hello Username!</h2>
+        <h2>ONE TABLE</h2>
+        <h2>Hello Name!</h2>
       </div>
     )
   }
