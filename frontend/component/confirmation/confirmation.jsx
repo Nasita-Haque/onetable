@@ -5,7 +5,7 @@ import {addDate} from "../../action/confirmation-action.js"; //Import Action
 const Confirmation = React.createClass({
 	componentDidMount(){
 		let timeOut = () => (
-			alert('Sorry! The 5 minute time limit is up. Please reload the page to try again.')
+			alert('Sorry! The 5 minute time limit is up. Please refresh to try again.')
 		)
 		setTimeout(timeOut, 300);
 	},

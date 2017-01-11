@@ -4,10 +4,10 @@ import Home from './home/home.js';
 import Signup from './signup.js';
 
 //STORE
-import Store from '../store/store.js'
+import store from '../store/store.js'
 
 //ACTIONS
-import fetchOpentable from '../actions/confirmation-action.js';
+import fetchOpentable from '../action/confirmation-action.js';
 
 //CONTAINERS
 import SignupContainer from "../container/signup-container.js"
@@ -20,5 +20,5 @@ import Routes from './react-router/router.jsx';
 //EXPORT
 //Import by writing out filepath './components'
 //It will automatically redirect to index.js
-export {App, Home, Routes, Store, Signup, SignupContainer, OpenTableContainer, confirmationContainer, fetchOpentable};
+export {App, Home, Routes, store, Signup, SignupContainer, OpenTableContainer, confirmationContainer, fetchOpentable};
 
