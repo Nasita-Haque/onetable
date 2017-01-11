@@ -1,4 +1,4 @@
-import {Home} from '../component/index'
+import {Home} from '../component/home/home'
 import {connect} from "react-redux";
 
 function mapStateToProps(state) {
@@ -7,4 +7,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps)(Home);

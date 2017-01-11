@@ -5,10 +5,10 @@ import restaurantReducer from './restaurant-reducer';
 import signUpReducer from './signup-reducer';
 
 const allReducers = combineReducers({
-  confirmationReducer,
-  openTableReducer,
-  restaurantReducer,
-  signUpReducer
+  confirmationReducer: confirmationReducer,
+  openTableReducer: openTableReducer,
+  restaurantReducer: restaurantReducer,
+  signUpReducer: signUpReducer
 })
 
 export default allReducers;
