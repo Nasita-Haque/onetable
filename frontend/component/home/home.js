@@ -5,10 +5,11 @@ import Footer from './footer';
 
 const Home = React.createClass({
   render() {
+    console.log(this.props.fetchRestaurants())
     console.log(this.props.restaurants)
     return (
       <div className='home'>
-        <Header name={name} />
+        <Header />
         <Content />
         <Footer />
       </div>
