@@ -1,4 +1,4 @@
-'use strict'
+ 'use strict'
 
 const router = require('express').Router();
 const OpenTable = require('../models').OpenTable;
@@ -22,24 +22,6 @@ router.route('/opentable/:RestaurantId')
 			.then(data => res.send(data))
 			.catch(error =>  res.status(500).send('Something broke when getting!'))
 	})
-
-// router.route('/opentable/:opentable')
-// 	.get((req, res)=>{
-// 		OpenTable.findAll({
-// 			where: {id: req.params.opentable},
-// 			include: [{
-// 				model: Restaurant
-// 			}]
-// 		})
-// 	.then((data)=>{
-// 		res.send(data);
-// 	})
-// 	.catch((err)=>{
-// 		res.status(500).send('Error. Check api routes.');
-// 		console.log('Error=>', err);
-// 	})
-// 	});
-
 
 router.route('/opentable/:RestaurantId')
 	///POST///
