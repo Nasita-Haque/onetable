@@ -4,7 +4,7 @@ import store from '../../store/store.js'
 
 //can access params by passing props through store. 
 const dispatchOpentableInfo = (props) => {
-	console.log("PROPS:", props.params.opentable)
+	console.log(props.params.opentable)
 	store.dispatch(fetchOpentable(props.params.opentable))
 }
 
