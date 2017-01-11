@@ -1,7 +1,7 @@
-import '../action/confirmation-action.js'
+import FETCH_DATA from '../action/confirmation-action.js'
 
 const _defaultState = {
-	opentableInfo: []
+	openTableInfo: []
 }
 
 const confirmationReducer = (state = _defaultState, action) => {
@@ -9,8 +9,8 @@ const confirmationReducer = (state = _defaultState, action) => {
 		case "FETCH_DATA" :
 			return ({
 				openTableInfo: [
-					...state.opentableInfo, 
-					action.opentableInfo
+					...state.openTableInfo, 
+					action.data
 				]
 			})
 		default:

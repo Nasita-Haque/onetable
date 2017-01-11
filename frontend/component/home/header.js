@@ -6,7 +6,7 @@ const Header = React.createClass({
     return (
       <div className='header'>
         <h2>ONE TABLE</h2>
-        <h2>Hello {this.props.name}!</h2>
+        <h2>Hello Name!</h2>
       </div>
     )
   }

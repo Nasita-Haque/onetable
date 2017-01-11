@@ -1,7 +1,15 @@
 import React from 'react';
-import {App, OpenTableContainer, store, SignupContainer, Home, confirmationContainer, restaurantContainer, LoginContainer, fetchOpentable} from '../index';
 
-
+import {App,
+ store,
+ Home,
+ OpenTableContainer,
+ SignupContainer,
+ restaurantContainer,
+ confirmationContainer,
+ dispatchOpentableInfo
+ LoginContainer,
+ fetchOpentable} from '../index';
 
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
@@ -9,12 +17,12 @@ import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 const Routes = (props) => (
 	<Router history={browserHistory}>
 		<Route path='/' component={App}>
-		<IndexRoute component={restaurantContainer} />
+		<IndexRoute component={Home} />
 			<Route path='/signup' component={SignupContainer} />
-			<Route path='/opentable' component={OpenTableContainer}/>
 			{/* <Route path='/confirmation/:opentable' component={confirmationContainer} onEnter={store.dispatch(fetchOpentable)}/> */}
 			<Router path='login' component={LoginContainer} />
-			<Route path='/confirmation/:opentable' component={confirmationContainer} onEnter={fetchOpentable}/>
+			<Route path='/opentable/:RestaurantId' component={OpenTableContainer}/>
+			<Route path='/confirmation/:opentable' component={confirmationContainer} onEnter={store.dispatch(dispatchOpentableInfo)}/>
 		</Route>
 	</Router>
 );

@@ -6,11 +6,12 @@ import signUpReducer from './signup-reducer';
 import logInReducer from './login-reducer';
 
 const allReducers = combineReducers({
-  confirmationReducer: confirmationReducer,
-  openTableReducer: openTableReducer,
-  restaurantReducer: restaurantReducer,
-  signUpReducer: signUpReducer,
-  logInReducer: logInReducer
+  confirmationReducer,
+  openTableReducer,
+  restaurantReducer,
+  signUpReducer,
+  logInReducer
+
 })
 
 export default allReducers;

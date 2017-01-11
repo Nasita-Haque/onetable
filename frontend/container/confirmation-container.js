@@ -4,7 +4,7 @@ import Confirmation from "../component/confirmation/confirmation.jsx";
 
 //mapStateToProps is just a word, that passes state and makes it available to our component. 
 const mapStateToProps = (state) => (
-	{opentableProp: state.confirmationReducer}
+	{openTableInfo: state.confirmationReducer}
 )
 
 //Connecting store(state) to our component.

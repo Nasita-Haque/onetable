@@ -10,7 +10,6 @@ const Confirmation = React.createClass({
 		setTimeout(timeOut, 300);
 	},
 	render(){
-		console.log(this.props.opentableProp)
 		return(
 			<div>Confirmation</div>
 		)
@@ -18,5 +17,5 @@ const Confirmation = React.createClass({
 })
 
 
-export default Confirmation;
+export default Confirmation
 //this.props.params.opentable

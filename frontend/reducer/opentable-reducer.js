@@ -1,14 +1,11 @@
 const _defaultState = {
-	date:null,
-	time:null
+	reservation:null
 }
 
 const openTableReducer = (state = _defaultState, action) => {
 	switch(action.type){
-		case "ADD_DATE" :
-			var output = Object.assign({}, state)
-			output.date = action.date
-			return output
+		case "ADD_AVAILABLE" :
+			return {reservation: action.reservation}
 		default:
 			return state;
 	}
