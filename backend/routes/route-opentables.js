@@ -18,22 +18,22 @@ router.route('/opentable')
 			.catch(error =>  res.status(500).send('Something broke when getting!'))
 	})
 
-router.route('/opentable/:opentable')
-	.get((req, res)=>{
-		OpenTable.findOne({
-			where: {id: req.params.opentable},
-			include: [{
-				model: Restaurant
-			}]
-		})
-	.then((data)=>{
-		res.send(data);
-	})
-	.catch((err)=>{
-		res.status(500).send('Error. Check api routes.');
-		console.log('Error=>', err);
-	})
-	});
+// router.route('/opentable/:opentable')
+// 	.get((req, res)=>{
+// 		OpenTable.findOne({
+// 			where: {id: req.params.opentable},
+// 			include: [{
+// 				model: Restaurant
+// 			}]
+// 		})
+// 	.then((data)=>{
+// 		res.send(data);
+// 	})
+// 	.catch((err)=>{
+// 		res.status(500).send('Error. Check api routes.');
+// 		console.log('Error=>', err);
+// 	})
+// 	});
 
 router.route('/opentable/:restaurantID')
 	///POST///

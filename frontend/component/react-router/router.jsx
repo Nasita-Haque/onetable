@@ -1,5 +1,5 @@
 import React from 'react';
-import {App, store, Home, OpenTableContainer, SignupContainer, restaurant container, confirmationContainer,dispatchOpentableInfo} from '../index';
+import {App, store, Home, OpenTableContainer, SignupContainer, restaurantContainer, confirmationContainer,dispatchOpentableInfo} from '../index';
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
 
