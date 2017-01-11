@@ -1,20 +1,18 @@
+import FETCH_DATA from '../action/confirmation-action.js'
+
 const _defaultState = {
-	user:null,
-	date:null,
-	restaurant:null,
-	time:null
+	openTableInfo: []
 }
 
 const confirmationReducer = (state = _defaultState, action) => {
 	switch(action.type){
-		case "ADD_DATE" :
-			let output = Object.assign({}, state)
-			output.date = action.date
-			return output
-		// case "ADD_DATE" :
-		// 	// let output = Object.assign({}, state)
-		// 	output.date = action.date
-		// 	return output
+		case "FETCH_DATA" :
+			return ({
+				openTableInfo: [
+					...state.openTableInfo, 
+					action.data
+				]
+			})
 		default:
 			return state;
 	}
