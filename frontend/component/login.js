@@ -15,7 +15,7 @@ import store from '../store/store.js'
  //    	}
 	// },
 	getInitialState(){
-		return{email: "",password:"" }
+		return{email: "ambar@ambar.com", password:"123" }
 	},
 	handleSubmit(e){
 		e.preventDefault()

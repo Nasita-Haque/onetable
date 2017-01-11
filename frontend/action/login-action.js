@@ -1,12 +1,17 @@
 const axios = require('axios')
-
+import $ from 'jquery';
+ 
 const addSession = (data) => ({
 	type: "ADD_SESSION",
 	data	
 })
 
 const getUser = (data) => (dispatch) =>{
-	axios.get('/api/validate', data)
+	console.log(data);
+	$.ajax({
+		url: '/api/validate', 
+		method:'GET',
+		data: data})
 	  .then(function (response) {
 	    console.log("response",response);
 	    dispatch(addSession(response))

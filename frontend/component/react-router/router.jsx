@@ -1,5 +1,5 @@
 import React from 'react';
-import {App, OpenTableContainer, store, SignupContainer, Home, confirmationContainer, restaurantContainer, fetchOpentable, LoginContainer, dispatchOpentableInfo} from '../index';
+import {App, OpenTableContainer, store, SignupContainer, Home, confirmationContainer, restaurantContainer, LoginContainer, fetchOpentable} from '../index';
 
 
 
@@ -14,7 +14,7 @@ const Routes = (props) => (
 			<Route path='/opentable' component={OpenTableContainer}/>
 			{/* <Route path='/confirmation/:opentable' component={confirmationContainer} onEnter={store.dispatch(fetchOpentable)}/> */}
 			<Router path='login' component={LoginContainer} />
-			<Route path='/confirmation/:opentable' component={confirmationContainer} onEnter={dispatchOpentableInfo}/>
+			<Route path='/confirmation/:opentable' component={confirmationContainer} onEnter={fetchOpentable}/>
 		</Route>
 	</Router>
 );

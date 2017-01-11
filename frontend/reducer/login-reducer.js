@@ -1,5 +1,5 @@
 const _defaultState = {
-	email: 'null',
+	email: null,
 	psw: null
 }
 
@@ -7,7 +7,7 @@ const logInReducer = (state = _defaultState, action) => {
 	switch(action.type){
 		case "ADD_SESSION" :
 			///new session
-			return 
+			return action.data
 		default: 
 			return state;
 	}
