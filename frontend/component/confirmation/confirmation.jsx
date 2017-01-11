@@ -17,4 +17,5 @@ const Confirmation = React.createClass({
 })
 
 
-export default Confirmation;
+export default Confirmation
+//this.props.params.opentable
