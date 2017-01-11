@@ -1,10 +1,8 @@
-import {Home} from '../component/home/home'
+import Home from '../component/home/home.js';
 import {connect} from "react-redux";
 
-function mapStateToProps(state) {
-  return {
-    restaurants: state.restaurantReducer
-  }
-}
+const mapStateToProps = (state) => (
+    {restaurants: state.restaurantReducer}
+)
 
 export default connect(mapStateToProps)(Home);
