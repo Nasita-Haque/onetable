@@ -1,14 +1,15 @@
 const _defaultState = {
 	name:"null",
-	last:"null"
+	last:"null",
+	email: 'null',
+	psw: 'null'
 }
 
 const signUpReducer = (state = _defaultState, action) => {
 	switch(action.type){
 		case "ADD_USER" :
-			var output = Object.assign({}, state)
-			output.user = action.user
-			return output
+			//add case
+			return 
 		default:
 			return state;
 	}
