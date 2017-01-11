@@ -20,7 +20,7 @@ router.route('/opentable')
 
 router.route('/opentable/:opentable')
 	.get((req, res)=>{
-		OpenTable.findAll({
+		OpenTable.findOne({
 			where: {id: req.params.opentable},
 			include: [{
 				model: Restaurant
