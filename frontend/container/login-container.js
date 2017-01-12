@@ -1,6 +1,6 @@
 import {connect} from "react-redux";
-import Login from "../component/login.js"
 import {bindActionCreators} from 'redux';
+import Login from "../component/login.js"
 import userAction from '../action/login-action.js'
 
 

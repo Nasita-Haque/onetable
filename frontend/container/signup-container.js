@@ -1,13 +1,18 @@
 import {connect} from "react-redux";
-import signup from "../component/signup.js"
+import {bindActionCreators} from 'redux';
+import Signup from "../component/signup.js"
+import userAction from '../action/signup-action'
+
 
 const SignupContainer = state => {
-	const {name, last, email, psw} = state
-
-	return {name, last, email, psw}
+	return {}
 }
-
-export default connect(SignupContainer)(signup);
+const mapDispatchToProps= (dispatch)=>{
+	console.log(userAction.createUser) 
+	console.log(dispatch)
+	return{signup: bindActionCreators(userAction.createUser, dispatch)}
+}
+export default connect(SignupContainer, mapDispatchToProps)(Signup);
 
 
 
