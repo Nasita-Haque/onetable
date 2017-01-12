@@ -1,28 +1,45 @@
 import React from 'react'
+import {createUser} from '../action/signup-action.js'
+import store from '../store/store.js'
 
 const Signup = React.createClass({
-	handleChange(e){
-		// store.dispatch(addSession(e))
-		// console.log(e.target.value)
-		const {email, psw} = this.props
+	getInitialState(){
+		return {
+			firstname: 'a',
+			lastname: 'br',
+			email: 'a@a.com',
+			password: '1234',
 
-		console.log('email ', e.target.value)
-		console.log(this.props)
+		}
+	},
+	handleSubmit(e){
+		e.preventDefault()
+		console.log(this.state)
+		this.props.signup(this.state)
+	},
+	handleChange(key, e){
+		console.log(key)
+		this.setState({[key]: e.target.value})
 	},
 	render(){
-		const {name, last, email, psw} = this.props
+		const {firstname, lastname, email, password} = this.state
+		console.log(this.props.signup)
 		return(
 			<div>
-				<form>
-					Firstname:
-					<input type='text' value={name}  onChange={this.handleChange}/>
+				<form onSubmit={this.handleSubmit} >
+					First name:
+					<input type='text' value={firstname}  onChange={this.handleChange.bind(this,"firstname")}/>
+					<br />
 					Last name:
-					<input type='text' value={last}/>
+					<input type='text' value={lastname} onChange={this.handleChange.bind(this,"lastname")}/>
+					<br />
 					Email:
-					<input type='email' value={email} />
+					<input type='email' value={email} onChange={this.handleChange.bind(this,"email")} />
+					<br />
 					Password:
-					<input type='text' value={psw} />
-					<input type='button' value='Signup'/>
+					<input type='Password' value={password} onChange={this.handleChange.bind(this, "password")} />
+					<br /> 
+					<input type='submit' value='Signup!'/>
 				</form>
 			</div>
 		)
