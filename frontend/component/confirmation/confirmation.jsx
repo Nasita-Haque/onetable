@@ -10,8 +10,11 @@ const Confirmation = React.createClass({
 		setTimeout(timeOut, 300);
 	},
 	render(){
+		console.log(this.props.openTableInfo)
 		return(
-			<div>Confirmation</div>
+			<div>
+				<h1>Confirmation</h1>
+			</div>
 		)
 	}
 })
