@@ -1,24 +1,24 @@
 //COMPONENTS
 import App from './app/app.js';
-import Home from './home/home.js';
+import Home from './home/home';
 import Signup from './signup.js';
 import Login from './login.js';
 
 //STORE
-import store from '../store/store.js'
+import store from '../store/store.js';
 
-//ACTIONS
+//ROUTES
+import Routes from './react-router/router.jsx';
+
+//ACTION
 import dispatchOpentableInfo from './react-router/route-dispatch.js';
 
 //CONTAINERS
 import SignupContainer from "../container/signup-container.js"
 import OpenTableContainer from "../container/opentable-container.js"
 import confirmationContainer from "../container/confirmation-container.js"
-// import restaurantContainer from "../container/restaurants-container"
+import restaurantContainer from "../container/restaurants-container"
 import LoginContainer from "../container/login-container"
-
-//ROUTES
-import Routes from './react-router/router.jsx';
 
 //EXPORT
 //Import by writing out filepath './components'
@@ -34,7 +34,6 @@ export {
  confirmationContainer,
  dispatchOpentableInfo,
  Login,
+ restaurantContainer,
  LoginContainer
 };
-
-
