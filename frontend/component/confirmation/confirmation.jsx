@@ -9,11 +9,25 @@ const Confirmation = React.createClass({
 		)
 		setTimeout(timeOut, 300);
 	},
-	postReservation(){
-		
+	updateReservation(){
+		// axios.post('/api/reservation/' + this.props.loginProp.id + '/' + this.props.params.opentable)
+		//  .then(((response) =>{
+		//     console.log(response);
+		//  })
+		//  .catch(((error) =>{
+		//     console.log(error);
+		//  });
+
+		axios.put('/api/opentable/' + this.props.params.opentable)
+		 .then((response) =>{
+		    console.log(response);
+		 })
+		 .catch((error) =>{
+		    console.log(error);
+		 })
 	},
 	render(){
-		console.log(this.props.loginProps)
+		let id = this.props.loginProps 
 		let info = this.props.openTableProps.openTableInfo[0]
 		console.log('INFO:', info)
 		return(
@@ -30,7 +44,7 @@ const Confirmation = React.createClass({
 						<div>{info.time}</div>	
 						<br /> 
 						<p>Please click the confirm below if this reservation is correct.</p>
-						<button value="Confirm!" onClick={postReservation}>Confirm!</button>
+						<button value="Confirm!" onClick={this.updateReservation}>Confirm!</button>
 					</div> 
 				: null 
 			}
