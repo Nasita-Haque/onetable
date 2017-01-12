@@ -1,18 +1,17 @@
 import axios from 'axios';
-// export const FETCH_DATA = "FETCH_DATA";
 
-export const fetchOpentable = (id) => {
-	const request = axios.get('/api/opentable/searchtable/'+id)
-	return (dispatch)=>{	
-		request.then((data)=>{
-			console.log('ACTION data', data.data)
-		dispatch({
-			type: "FETCH_DATA",
-			opentableInfo: data.data
-		})
+export const fetchOpentable = (opentableInfo) => ({
+  	type: "FETCH_DATA",
+	data: opentableInfo
+})
+
+export const getOpentableAsync = (id) => dispatch => {
+	 axios.get('/api/opentable/searchtable/' + id)
+	.then((data)=>{
+		console.log('ACTION DATA:', data.data)
+		dispatch(fetchOpentable(data.data))
 	})
-}}
-
+}
 
 
 

@@ -1,5 +1,3 @@
-// import FETCH_DATA from '../action/confirmation-action.js'
-
 const _defaultState = {
 	openTableInfo: []
 }
