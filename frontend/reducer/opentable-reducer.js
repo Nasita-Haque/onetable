@@ -1,11 +1,8 @@
-const _defaultState = {
-	reservation:null
-}
 
-const openTableReducer = (state = _defaultState, action) => {
+const openTableReducer = (state = {}, action) => {
 	switch(action.type){
 		case "ADD_AVAILABLE" :
-			return {reservation: action.reservation}
+			return action.reservation
 		default:
 			return state;
 	}
