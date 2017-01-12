@@ -1,10 +1,16 @@
-import {Home} from '../component/index'
+import Home from '../component/home/home.js';
+import {fetchRestaurants} from '../action/restaurants-actions';
 import {connect} from "react-redux";
+import {bindActionCreators} from 'redux';
 
-function mapStateToProps(state) {
-  return {
-    restaurants: state.restaurantReducer
-  }
-}
+const mapStateToProps = (state) => (
+    {restaurants: state.restaurantReducer}
+)
 
-export default connect(mapStateToProps)(Home)
+const matchDispatchToProps = (dispatch) => ({
+  action: bindActionCreators(fetchRestaurants, dispatch)
+})
+
+// console.log(fetchRestaurants)
+
+export default connect(mapStateToProps, matchDispatchToProps)(Home);

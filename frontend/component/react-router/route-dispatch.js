@@ -9,4 +9,4 @@ const dispatchOpentableInfo = (nextState) => {
 	store.dispatch(fetchOpentable(nextState.params.opentable))
 }
 
-export default dispatchOpentableInfo;
+// export default dispatchOpentableInfo;

@@ -6,16 +6,16 @@ import {
  Home,
  OpenTableContainer,
  SignupContainer,
- // restaurantContainer,
+ restaurantContainer,
  confirmationContainer,
  dispatchOpentableInfo,
  LoginContainer
 } from '../index';
 
 import {
-	Router, 
-	Route, 
-	IndexRoute, 
+	Router,
+	Route,
+	IndexRoute,
 	browserHistory
 } from 'react-router';
 
@@ -23,7 +23,7 @@ import {
 const Routes = (props) => (
 	<Router history={browserHistory}>
 		<Route path='/' component={App}>
-		<IndexRoute component={Home} />
+		<IndexRoute component={restaurantContainer} />
 			<Route path='/signup' component={SignupContainer} />
 			<Router path='login' component={LoginContainer} />
 			<Route path='/opentable/:RestaurantId' component={OpenTableContainer}/>

@@ -13,6 +13,3 @@ const mapDispatchToProps= (dispatch)=>{
 }
 
 export default connect(LoginContainer,mapDispatchToProps)(Login);
-
-
-
