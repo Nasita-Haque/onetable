@@ -4,15 +4,16 @@ const models = require('../models');
 const { User } = models;
 
 //validates a user
-//user needs username + password
+//user needs email + password
 
 const authenticateUser = (req, res) => {
-  console.log("authenticateUser!!", req.query)
-  const { username, password} = req.query
+  console.log("authenticateUser!!", req.body)
+  console.log("authenticateUser!!", req.query);
+  const { email, password} = req.query
 
   User.findOne({
     where: {
-      username,
+      email,
       password
     }
   })
@@ -31,7 +32,7 @@ const authenticateUser = (req, res) => {
   })
 }
 
-//gets a user
+//gets a user by id
 const getUserbyId = (req, res) => {
   console.log("getUserbyId!!!!");
   User.findById(req.params.id)

@@ -10,6 +10,24 @@ const moment = require("moment")
 ///////////////////////
 ///ROUTES//& FUNCTION//
 ///////////////////////
+
+router.route('/opentable/searchtable/:opentable')
+	.get((req, res)=>{
+		OpenTable.findOne({
+			where: {id: req.params.opentable},
+			include: [{
+				model: Restaurant
+			}]
+		})
+	.then((data)=>{
+		res.send(data);
+	})
+	.catch((err)=>{
+		res.status(500).send('Error. Check api routes.');
+		console.log('Error=>', err);
+	})
+	});
+
 router.route('/opentable/:RestaurantId')
 	///GET///
 	.get((req,res) => {
