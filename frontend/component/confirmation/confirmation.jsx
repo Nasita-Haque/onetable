@@ -1,6 +1,6 @@
 import React from 'react'; //Import React
 import store from '../../store/store.js'; //Import State
-import axiox from 'axios';
+import axios from 'axios';
 
 const Confirmation = React.createClass({
 	componentDidMount(){
@@ -29,7 +29,7 @@ const Confirmation = React.createClass({
 						<h3>Time:</h3>
 						<div>{info.time}</div>	
 						<br /> 
-						<p>Please click the confirm button below if this reservation is correct.</p>
+						<p>Please click the confirm below if this reservation is correct.</p>
 						<button value="Confirm!" onClick={postReservation}>Confirm!</button>
 					</div> 
 				: null 
