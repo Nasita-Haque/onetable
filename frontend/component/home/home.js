@@ -5,7 +5,7 @@ import Footer from './footer';
 
 const Home = React.createClass({
   componentDidMount() {
-
+    console.log(this.props.action())
   },
   render() {
     return (
