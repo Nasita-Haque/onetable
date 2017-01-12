@@ -18,7 +18,7 @@ const Opentable = React.createClass({
  							date:data.data[i].date,
  							time:data.data[i].time,
  							id:data.data[i].id
- 						}			
+ 						}
  					}
  					return currentData
 				})
@@ -33,23 +33,23 @@ const Opentable = React.createClass({
 			let button= [];
 				for(var key in reservation){
 					button.push(
-						<button key={key} 
-						onClick={this.handleClick} 
+						<button key={key}
+						onClick={this.handleClick}
 						id={reservation[key].id}>{reservation[key].time}
 						</button>
 						)
-				}								
+				}
 				return button;
 		},
 		handleClick(e){
 			this.props.goto(`/confirmation/${e.target.id}`)
 		},
 	render(){
-		this.props.reservation ? console.log("props",this.props.reservation) : null
+		this.props.reservation ? console.log("params",this.props.params) : null
 		return(
-			<div>	
+			<div>
 				{this.createButton()}
-				
+
 			</div>
 		)
 	}
