@@ -3,8 +3,10 @@ import {fetchRestaurants} from '../action/restaurants-actions';
 import {connect} from "react-redux";
 import {bindActionCreators} from 'redux';
 
-const mapStateToProps = (state) => (
-    {restaurants: state.restaurantReducer}
+const mapStateToProps = (state, ownprops) => (
+    {restaurants: state.restaurantReducer,
+      goto:ownprops.router.push
+    }
 )
 
 const matchDispatchToProps = (dispatch) => ({

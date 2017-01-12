@@ -5,13 +5,24 @@ import Footer from './footer';
 
 const Home = React.createClass({
   componentDidMount() {
-    console.log(this.props.action())
+    this.props.action()
+  },
+  displayRestaurants() {
+    const {restaurants} = this.props
+    return restaurants.map((restaurant, idx) => {
+      return (<button key={idx} id={restaurant.id} onClick={this.handleClick}>{restaurant.name}</button>)
+    })
+    console.log('display', allRestaurants)
+  },
+  handleClick(e){
+    this.props.goto(`/opentable/${e.target.id}`)
   },
   render() {
+    console.log(this.props.params)
     return (
       <div className='home'>
         <Header />
-        <Content />
+        <Content allRestaurants={this.displayRestaurants()}/>
         <Footer />
       </div>
     )
