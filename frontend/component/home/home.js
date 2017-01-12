@@ -4,6 +4,9 @@ import Content from './content'
 import Footer from './footer';
 
 const Home = React.createClass({
+  componentDidMount() {
+
+  },
   render() {
     return (
       <div className='home'>
