@@ -1,4 +1,4 @@
-import {fetchOpentable} from '../../action/confirmation-action.js'
+import {getOpentableAsync} from '../../action/confirmation-action.js'
 import store from '../../store/store.js'
 
 
@@ -6,7 +6,7 @@ import store from '../../store/store.js'
 const dispatchOpentableInfo = (nextState) => {
 	store.getState()
 	console.log(nextState.params.opentable)
-	store.dispatch(fetchOpentable(nextState.params.opentable))
+	store.dispatch(getOpentableAsync(nextState.params.opentable))
 }
 
 export default dispatchOpentableInfo;
