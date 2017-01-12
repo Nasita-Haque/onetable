@@ -1,4 +1,3 @@
-const axios = require('axios')
 import $ from 'jquery';
  
 const addSession = (data) => ({
