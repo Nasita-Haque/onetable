@@ -97,8 +97,17 @@ const updateUser = (req, res) => {
     console.log('error: ',err)
   })
 }
+const logingin = (req, res) => {
+  req.session()
+  req.redirect('/')
+}
+// app.get('/logout', function(req, res) {
+//   req.session.reset();
+//   res.redirect('/');
+// });
 
 ///ROUTES
+
 router.route('/validate')
   .get(authenticateUser)
 router.route('/validate/userid')
