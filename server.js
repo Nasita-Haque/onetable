@@ -13,12 +13,11 @@ app.use(express.static(path.join(__dirname,'./frontend/public')))
 app.use(express.static(path.join(__dirname,'./frontend/styling')))
 
 
-//app.set('trust proxy', 1) // trust first proxy
+app.set('trust proxy', 1) // trust first proxy
 app.use(session({
   secret: 'serete key',//interal use to make use is secured
   resave: true,
-  saveUninitialized: true,
-  cookie: { secure: true }
+  saveUninitialized: true
 }))
 
 
