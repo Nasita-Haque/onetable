@@ -23,14 +23,19 @@ border: 1px red;
 /*/////////////////////////*/
 
 
-
-
 .container{
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 	margin-top: 100px;
+}
+.container1{
+	margin-bottom: 30px;
+	margin-top: 50px;
 }
 
 .panel-body{
+	height: 300px;
+}
+.maindiv1{
 	height: 300px;
 }
 
