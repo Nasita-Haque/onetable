@@ -10,11 +10,12 @@ body {
 }
 
 .content {
+  margin-top: 70px;
   display: flex;
   /*align-items: center;*/
-  height: 70vh;
+  /*height: 70vh;*/
   width: 100%;
-  background-color: lightyellow;
+  /*background-color: lightyellow;*/
 }
 /*-------------------------------------------------*/
 /*NAVBAR*/
@@ -35,14 +36,15 @@ body {
 .username{
   margin-top: 50px;
   margin-right: 10px;
-
+  /*border-bottom: 0.1px black solid;*/
+  /*background-color: skyblue;*/
 }
 
 .border{
-  width: 99%;
+  width: 92%;
   height: 1px;
   margin-top: 80px;
-  margin-left: 108px;
+  margin-left: 105px;
   border-bottom: 2px solid black;
   position: absolute;
 }
@@ -51,9 +53,14 @@ body {
 /*FOOTER*/
 
 .footer {
-  background-color: skyblue;
-  height: 300px;
+  border-top: 4px solid black;
+  margin-bottom: 100px;
 }
+
+.copyright{
+  margin-left: 340px;
+}
+
 
 /*-------------------------------------------------*/
 /*HOME*/
@@ -68,8 +75,17 @@ img {
 .images {
   display: flex;
   width: 100%;
+  margin-top: 100px;
   flex-wrap: wrap;
   margin-left: 50px;
+  margin-top: -50px;
+}
+
+span {
+  margin-left: -200px;
+  margin-bottom: 950px;
+  color: red;
+  z-index: 99;
 }
 
 .home {
@@ -131,7 +147,6 @@ img {
 
 .confirmation-button:hover{
   background: black;
-  font-color: white;
+  color: white;
 }
-
 

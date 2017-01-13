@@ -5,8 +5,7 @@ const Footer = React.createClass({
   render() {
     return (
       <div className='footer'>
-        <h2>footer content 1</h2>
-        <h2>footer content 2</h2>
+      	<p className='copyright'>One Table. Copyright 2017. Team Members: Amber, Daniel, Chanice, Nasita.</p>
       </div>
     )
   }

@@ -21,7 +21,7 @@ axios.request({
         zipcode: restaurant.restaurant.location.zipcode,
         price: restaurant.restaurant.price_range,
         cuisine: restaurant.restaurant.cuisines,
-        img_url: restaurant.restaurant.photos_url,
+        img_url: restaurant.restaurant.featured_image,
         website_url: restaurant.restaurant.url
       }
     ))
