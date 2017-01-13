@@ -9,7 +9,8 @@ import {
  restaurantContainer,
  confirmationContainer,
  dispatchOpentableInfo,
- LoginContainer
+ LoginContainer,
+ displayRestaurantContainer
 } from '../index';
 
 import {

@@ -3,14 +3,14 @@ import React from 'react'
 import store from '../../store/store.js'
 import axios from 'axios'
 import moment from 'moment'
-import DisplayRestaurant from './displayRestaurant.js';
-
+import DisplayRestaurant from '../../container/displayRestaurant-container.js';
+import {fetchRestaurant} from "../../action/display-action"
 
 const Opentable = React.createClass({
 	componentDidMount(){
 			axios.get(`/api/opentable/${this.props.params.RestaurantId}`)
 				.then(data => {
-					console.log(data)
+					// console.log(data)
  					let currentData = {};
  					for (var i = 0; i < data.data.length; i++) {
  						currentData[i] = {
@@ -26,6 +26,9 @@ const Opentable = React.createClass({
 					store.dispatch(addReservation(data))
 					})
 				 .catch(error => console.log(error))
+				 //get to populate restaurant info 
+				 store.dispatch(fetchRestaurant(this.props.params.RestaurantId))
+
 		},
 		createButton(){
 			let reservation = this.props.reservation
@@ -46,7 +49,7 @@ const Opentable = React.createClass({
 	render(){
 		return(
 			<div>	
-				<DisplayRestaurant/>
+				<DisplayRestaurant />
 				{this.createButton()}
 			</div>
 		)
