@@ -7,7 +7,7 @@ import store from '../store/store.js'
 		return {email: "ambar@ambar.com", password:"123" }
 	},
 	handleSubmit(e){
-		 e.preventDefault()
+		e.preventDefault()
 		this.props.login(this.state)
 		this.props.router.push('/')
 	},
@@ -17,16 +17,31 @@ import store from '../store/store.js'
 	render(){
 		 const {email, password} = this.state;
 		return(
-			<div>
-				<form onSubmit={this.handleSubmit} >
-					Email:
-					<input type='email' value={email} onChange={this.handleChange.bind(this,"email")} />
-					<br />
-					Password:
-					<input type='Password' value={password} onChange={this.handleChange.bind(this, "password")} />
-					<br />
-					<input type='submit' value='Login'/>
-				</form>
+			<div className='container'>	
+			    <div className="row">
+					<div className="col-md-4 col-md-offset-4">
+			    		<div className="panel panel-default">
+						  	<div className="panel-heading">
+						    	<h3 className="panel-title">Please sign in</h3>
+						 	</div>
+						  	<div className="panel-body">
+							<form className='form login form-control maindiv' onSubmit={this.handleSubmit} >
+							 <fieldset>
+							 	<div className="form-group">
+								Email:
+								<input className="form-control" type='email' value={email} onChange={this.handleChange.bind(this,"email")} />
+								</div><br />
+								<div className="form-group">
+								Password:
+								<input className="form-control"  type='Password' value={password} onChange={this.handleChange.bind(this, "password")} />
+								</div><br />
+								<input className="btn btn-lg  btn-block button1" type='submit' value='Login'/>
+							  </fieldset>
+							</form>
+						    </div>
+						</div>
+					</div>
+				</div>
 			</div>
 		)
 	}
