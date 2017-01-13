@@ -7,30 +7,19 @@ import store from '../store/store.js'
 		return {email: "ambar@ambar.com", password:"123" }
 	},
 	handleSubmit(e){
-		// e.preventDefault()
+		 e.preventDefault()
 		this.props.login(this.state)
+
+		this.props.router.push('/')
+		
 
 	},
 	handleChange(key, e){
 	this.setState({[key] : e.target.value})
 	},
-
-	// currentUser() {
-	// 	let that = this
-	// 	let data = this.props.id
-	// 	$.ajax({
-	// 	url: '/api/user/:id',
-	// 	method: 'GET',
-	// 	data: "data"
-	// 	})
-	// .then(function(response) {
-	// 	console.log("currentUser", response)
-	// 		browserHistory.push("/")
-	// })
-	// },
-
 	render(){
 		 const {email, password} = this.state;
+		 console.log("PROPS ==========>", this.props)
 		return(
 			<div>
 				<form onSubmit={this.handleSubmit} >

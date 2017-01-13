@@ -6,11 +6,11 @@ const Content = React.createClass({
     console.log(this.props)
     return (
       <div>
-        <h1>FEATURED NEW YORK RESTAURANTS</h1>
+        <center><h1>FEATURED NEW YORK RESTAURANTS</h1></center>
         <div className='content'>
-          <ul className='images'>
+          <div className='images'>
             {this.props.allRestaurants}
-          </ul>
+          </div>
         </div>
       </div>
     )
