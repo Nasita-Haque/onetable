@@ -27,6 +27,7 @@ const Confirmation = React.createClass({
 		 })
 	},
 	render(){
+		console.log('CHECK:', this.props.loginProps)
 		let id = this.props.loginProps 
 		let info = this.props.openTableProps.openTableInfo[0]
 		console.log('INFO:', info)
@@ -34,17 +35,19 @@ const Confirmation = React.createClass({
 		<div>
 			{
 				info ?  
-					<div>
-						<h1>Confirmation</h1>
-						<h3>Restaurant:</h3>
-						<div>{info.Restaurant.name}</div>
-						<h3>Date:</h3>	
-						<div>{info.date}</div>	
-						<h3>Time:</h3>
-						<div>{info.time}</div>	
+					<div className="confirmation-main-div">
+						<h1 className='title-div'>You're almost done!</h1>
+						<div className="opentable-div">
+							<h3 className="info-title">Restaurant</h3>
+							<div>{info.Restaurant.name}</div>
+							<h3 className="info-title">Date</h3>	
+							<div>{info.date}</div>	
+							<h3 className="info-title">Time</h3>
+							<div>{info.time}</div>
+						</div>
 						<br /> 
-						<p>Please click the confirm below if this reservation is correct.</p>
-						<button value="Confirm!" onClick={this.updateReservation}>Confirm!</button>
+						<p className="p-tag">Please confirm below if this reservation is correct.</p>
+						<button className="confirmation-button" onClick={this.updateReservation}>Confirm</button>
 					</div> 
 				: null 
 			}
