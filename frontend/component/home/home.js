@@ -20,7 +20,7 @@ const Home = React.createClass({
         return (
           <div>
             <img key={idx} className={restaurant.name} id={restaurant.id} src={restaurant.img_url} onClick={this.handleClick} />
-            <span>{restaurant.name}</span>
+            <span key={restaurant.name}>{restaurant.name}</span>
           </div>
         )
       }
