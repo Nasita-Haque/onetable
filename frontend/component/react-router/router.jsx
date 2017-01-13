@@ -9,7 +9,9 @@ import {
  restaurantContainer,
  confirmationContainer,
  dispatchOpentableInfo,
- LoginContainer
+ LoginContainer,
+ userAuth
+
 } from '../index';
 
 import {
@@ -19,10 +21,13 @@ import {
 	browserHistory
 } from 'react-router';
 
+const enterApp = ()=>{
+	store.dispatch(userAuth.userAuth());
+}
 
 const Routes = (props) => (
 	<Router history={browserHistory}>
-		<Route path='/' component={App}>
+		<Route path='/' component={App} onEnter={enterApp}>
 		<IndexRoute component={restaurantContainer} />
 			<Route path='/signup' component={SignupContainer} />
 			<Router path='login' component={LoginContainer} />
