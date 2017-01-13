@@ -1,8 +1,11 @@
 
-const openTableReducer = (state = {}, action) => {
+const openTableReducer = (state = {reservation:null,id:null}, action) => {
 	switch(action.type){
 		case "ADD_AVAILABLE" :
-			return action.reservation
+			return Object.assign({}, state, {reservation:action.reservation})
+		case "ADD_ID" :
+		console.log('log ADD_ID')
+			return Object.assign({}, state, {id:action.id})
 		default:
 			return state;
 	}

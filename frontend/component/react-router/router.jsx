@@ -11,7 +11,8 @@ import {
  dispatchOpentableInfo,
  LoginContainer,
  userAuth,
- appContainer
+ appContainer,
+ displayRestaurantContainer
 } from '../index';
 
 import {

@@ -23,6 +23,7 @@ import confirmationContainer from "../container/confirmation-container.js"
 import restaurantContainer from "../container/restaurants-container"
 import LoginContainer from "../container/login-container"
 import appContainer from "../container/app-container"
+import displayRestaurantContainer from '../container/displayRestaurant-container'
 
 //EXPORT
 //Import by writing out filepath './components'
@@ -42,6 +43,7 @@ export {
  Login,
  restaurantContainer,
  LoginContainer,
- userAuth,
- appContainer
+ appContainer,
+ displayRestaurantContainer,
+ userAuth
 };
