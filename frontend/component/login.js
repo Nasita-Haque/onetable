@@ -25,7 +25,7 @@ import store from '../store/store.js'
 						    	<h3 className="panel-title">Please sign in</h3>
 						 	</div>
 						  	<div className="panel-body">
-							<form className='form login form-control' onSubmit={this.handleSubmit} >
+							<form className='form login form-control maindiv' onSubmit={this.handleSubmit} >
 							 <fieldset>
 							 	<div className="form-group">
 								Email:
@@ -35,7 +35,7 @@ import store from '../store/store.js'
 								Password:
 								<input className="form-control"  type='Password' value={password} onChange={this.handleChange.bind(this, "password")} />
 								</div><br />
-								<input className="btn btn-lg btn-success btn-block" type='submit' value='Login'/>
+								<input className="btn btn-lg  btn-block button1" type='submit' value='Login'/>
 							  </fieldset>
 							</form>
 						    </div>
