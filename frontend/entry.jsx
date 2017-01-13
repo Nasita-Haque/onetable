@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux'
 import {Routes, store} from './component';
 import './styling/App.css';
+import './styling/user.css';
 
 ReactDOM.render(
 	<Provider store={store}>

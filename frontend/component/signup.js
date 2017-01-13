@@ -24,7 +24,7 @@ const Signup = React.createClass({
 		const {firstname, lastname, email, password} = this.state
 		return(
 			<div>
-				<form onSubmit={this.handleSubmit} >
+				<form className="form login" onSubmit={this.handleSubmit} >
 					First name:
 					<input type='text' value={firstname}  onChange={this.handleChange.bind(this,"firstname")}/>
 					<br />
@@ -37,8 +37,25 @@ const Signup = React.createClass({
 					Password:
 					<input type='Password' value={password} onChange={this.handleChange.bind(this, "password")} />
 					<br /> 
-					<input type='submit' value='Signup!'/>
+					<input className="button" type='submit' value='Signup!'/>
 				</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			</div>
 		)
 	}
@@ -46,3 +63,9 @@ const Signup = React.createClass({
 
 
 export default Signup
+
+
+
+
+
+	// <a href="" className="btn btn-lg btn-primary btn-block">Register</a>
