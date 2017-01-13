@@ -9,15 +9,6 @@ body {
   height: 100vh;
 }
 
-/*-------------------------------------------------*/
-/*NAVBAR*/
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: skyblue;
-}
-
 .content {
   display: flex;
   /*align-items: center;*/
@@ -25,6 +16,47 @@ body {
   width: 100%;
   background-color: lightyellow;
 }
+/*-------------------------------------------------*/
+/*NAVBAR*/
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 120px;}
+
+.logo{
+  margin-left: 12px;
+  margin-top: 10px;
+  height: 80px;
+  width: 270px;
+}
+
+.username{
+  margin-top: 50px;
+  margin-right: 10px;
+
+}
+
+.border{
+  width: 99%;
+  height: 1px;
+  margin-top: 80px;
+  margin-left: 108px;
+  border-bottom: 2px solid black;
+  position: absolute;
+}
+
+/*-------------------------------------------------*/
+/*FOOTER*/
+
+.footer {
+  background-color: skyblue;
+  height: 300px;
+}
+
+/*-------------------------------------------------*/
+/*HOME*/
 
 img {
   height: 200px;
@@ -40,15 +72,6 @@ img {
   margin-left: 50px;
 }
 
-/*-------------------------------------------------*/
-/*FOOTER*/
-.footer {
-  background-color: skyblue;
-  height: 300px;
-}
-
-/*-------------------------------------------------*/
-/*HOME*/
 .home {
   display: flex;
   flex-direction: column;
@@ -66,6 +89,7 @@ img {
   border-radius: 10px;
   border: 5px solid mistyrose;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .title-div{
@@ -109,6 +133,5 @@ img {
   background: black;
   font-color: white;
 }
-/*WORKS*/
 
 
