@@ -10,13 +10,13 @@ const Confirmation = React.createClass({
 		setTimeout(timeOut, 300);
 	},
 	updateReservation(){
-		// axios.post('/api/reservation/' + this.props.loginProp.id + '/' + this.props.params.opentable)
-		//  .then(((response) =>{
-		//     console.log(response);
-		//  })
-		//  .catch(((error) =>{
-		//     console.log(error);
-		//  });
+		axios.post('/api/reservation/' + this.props.loginProps.id + '/' + this.props.params.opentable)
+		 .then((response) =>{
+		    console.log(response);
+		 })
+		 .catch((error) =>{
+		    console.log(error);
+		 })
 
 		axios.put('/api/opentable/' + this.props.params.opentable)
 		 .then((response) =>{
@@ -25,16 +25,16 @@ const Confirmation = React.createClass({
 		 .catch((error) =>{
 		    console.log(error);
 		 })
+		 this.props.router.push('/')
 	},
 	render(){
-		console.log('CHECK:', this.props.loginProps)
+		console.log(this.props)
 		let id = this.props.loginProps 
 		let info = this.props.openTableProps.openTableInfo[0]
-		console.log('INFO:', info)
 		return(
 		<div>
 			{
-				info ?  
+				info && id ?  
 					<div className="confirmation-main-div">
 						<h1 className='title-div'>You're almost done!</h1>
 						<div className="opentable-div">
