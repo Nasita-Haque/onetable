@@ -1,6 +1,7 @@
 //COMPONENTS
 import App from './app/app.js';
 import Home from './home/home';
+import Header from './home/header';
 import Signup from './signup.js';
 import Login from './login.js';
 
@@ -25,6 +26,7 @@ import LoginContainer from "../container/login-container"
 //It will automatically redirect to index.js
 export {
  App,
+ Header,
  Home,
  Routes,
  store,
