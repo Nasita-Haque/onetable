@@ -66,6 +66,14 @@ body {
 }
 
 
+
+/*-------------------------------------------------*/
+/*APP*/
+
+/*#main{
+  display: flex;
+  align-items: space-between;
+}*/
 /*-------------------------------------------------*/
 /*HOME*/
 
@@ -161,11 +169,12 @@ span {
 
 #siteContainer-displayRes{
   display: flex;
-  margin-left: 200px;
+  margin-left: 400px;
   margin-top: 20px;
-  margin-right: 200px;
+  margin-right: 150px;
+  padding-left: 50px;
   padding-bottom: 20px;
-  width: 775px;
+  width: 400px;
   border-radius: 10px;
   border: 5px solid mistyrose;
   text-align: center;
@@ -176,11 +185,12 @@ span {
 /*OpenTable*/
 
 #siteContainer-opentable{
-  display: flex;
+  /*display: flex;*/
   margin-left: 200px;
   margin-top: 20px;
   margin-right: 200px;
   padding-bottom: 20px;
+  padding-left: 200px;
   width: 775px;
   border-radius: 10px;
   border: 5px solid mistyrose;
@@ -188,3 +198,41 @@ span {
   margin-bottom: 20px;
 }
 
+
+
+#second-container{
+  text-align: center;
+  margin-left: 500px;
+  padding-left: 200px;
+
+}
+
+.bold{
+  text-weight: bold;
+}
+
+.opentable-button-div{
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.opentable-button{
+  font-size: 17px;
+  text-align: center;
+  border-radius:40px;
+  outline:none;
+  letter-spacing:1px;
+  text-shadow:0;
+  background: #fff;
+  cursor: pointer;
+  border: 2px solid black;
+  margin: 3px;
+}
+
+.opentable-button:hover{
+  background: black;
+  color: white;
+}

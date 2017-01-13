@@ -31,18 +31,23 @@ const Opentable = React.createClass({
 
 		},
 		createButton(){
-			let reservation = this.props.reservation
-			let button= [];
-				for(var key in reservation){
-					button.push(
-						<button key={key} 
-						onClick={this.handleClick} 
-						id={reservation[key].id}>{reservation[key].time}
-						</button>
-						)
-				}								
-				return button;
-		},
+            let reservation = this.props.reservation
+            let button= [];
+                for(var key in reservation){
+                    let time = reservation[key].time.split(':').join('')
+                    button.push(
+                        <button key={key} 
+                        className="opentable-button"
+                        onClick={this.handleClick} 
+                        id={reservation[key].id}>{
+                            moment(time, "hmmss").format(' hh:mm:ss a')
+                            // moment(""+reservation[key].time).format(' h:mm:ss a')
+                        }
+                        </button>
+                        )
+                }                                
+                return button;
+        },
 		handleClick(e){
 			this.props.goto(`/confirmation/${e.target.id}`)
 		},
@@ -51,7 +56,7 @@ const Opentable = React.createClass({
 			<div>	
 				<div id='siteContainer-opt'>
 					<DisplayRestaurant />
-					{this.createButton()}
+					<div className='opentable-button-div'>{this.createButton()}</div>
 				</div>
 			</div>
 		)
