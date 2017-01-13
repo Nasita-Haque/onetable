@@ -21,6 +21,7 @@ const getUser = (data) => (dispatch) =>{
 	 return Promise.resolve()
 }
 
+
 module.exports = {
 	getUser
 }

@@ -9,7 +9,8 @@ import {
  restaurantContainer,
  confirmationContainer,
  dispatchOpentableInfo,
- LoginContainer
+ LoginContainer,
+ currentUser
 } from '../index';
 
 import {
@@ -25,7 +26,7 @@ const Routes = (props) => (
 		<Route path='/' component={App}>
 		<IndexRoute component={restaurantContainer} />
 			<Route path='/signup' component={SignupContainer} />
-			<Router path='login' component={LoginContainer} />
+			<Router path='login' component={LoginContainer} onEnter={currentUser}/>
 			<Route path='/opentable/:RestaurantId' component={OpenTableContainer}/>
 			<Route path='/confirmation/:opentable' component={confirmationContainer} onEnter={dispatchOpentableInfo}/>
 		</Route>
