@@ -5,9 +5,6 @@ import axios from 'axios'
 
 const DisplayRestaurant = React.createClass({
 	render(){
-		console.log(this.props.displayState.data)
-		let data = this.props.displayState.data;
-		for(var key in dollarSign)
 		return(
 				<div>
 					<div id='siteContainer-displayRes'>
