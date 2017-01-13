@@ -9,17 +9,13 @@ import store from '../store/store.js'
 	handleSubmit(e){
 		 e.preventDefault()
 		this.props.login(this.state)
-
 		this.props.router.push('/')
-		
-
 	},
 	handleChange(key, e){
 	this.setState({[key] : e.target.value})
 	},
 	render(){
 		 const {email, password} = this.state;
-		 console.log("PROPS ==========>", this.props)
 		return(
 			<div>
 				<form onSubmit={this.handleSubmit} >

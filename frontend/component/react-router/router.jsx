@@ -10,8 +10,8 @@ import {
  confirmationContainer,
  dispatchOpentableInfo,
  LoginContainer,
- userAuth
-
+ userAuth,
+ appContainer
 } from '../index';
 
 import {
@@ -27,7 +27,7 @@ const enterApp = ()=>{
 
 const Routes = (props) => (
 	<Router history={browserHistory}>
-		<Route path='/' component={App} onEnter={enterApp}>
+		<Route path='/' component={appContainer} onEnter={enterApp}>
 		<IndexRoute component={restaurantContainer} />
 			<Route path='/signup' component={SignupContainer} />
 			<Router path='login' component={LoginContainer} />

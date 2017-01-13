@@ -1,7 +1,5 @@
 import React from 'react';
-import Header from './header';
 import Content from './content'
-import Footer from './footer';
 
 const Home = React.createClass({
   componentDidMount() {
@@ -18,9 +16,8 @@ const Home = React.createClass({
     return restaurants.map((restaurant, idx) => {
       if(idx < 8) {
         return (
-          <div>
+          <div key={'res-'+ idx}>
             <img key={idx} className={restaurant.name} id={restaurant.id} src={restaurant.img_url} onClick={this.handleClick} />
-            <span key={restaurant.name}>{restaurant.name}</span>
           </div>
         )
       }
