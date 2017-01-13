@@ -14,16 +14,14 @@ const Signup = React.createClass({
 	},
 	handleSubmit(e){
 		e.preventDefault()
-		console.log(this.state)
 		this.props.signup(this.state)
+		this.props.router.push('/')
 	},
 	handleChange(key, e){
-		console.log(key)
 		this.setState({[key]: e.target.value})
 	},
 	render(){
 		const {firstname, lastname, email, password} = this.state
-		console.log(this.props.signup)
 		return(
 			<div>
 				<form onSubmit={this.handleSubmit} >
