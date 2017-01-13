@@ -2,7 +2,7 @@ import {connect} from "react-redux";
 import {bindActionCreators} from 'redux';
 import Login from "../component/login.js"
 import userAction from '../action/login-action.js'
-import {currentUser} from '../component'
+
 
 
 const LoginContainer = state => {
@@ -12,7 +12,7 @@ const LoginContainer = state => {
 const mapDispatchToProps= (dispatch)=>{
 	return{
 		login: bindActionCreators(userAction.getUser, dispatch),
-		currentUser: bindActionCreators(currentUser, dispatch)
+
 	}
 }
 

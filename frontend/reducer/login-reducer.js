@@ -5,7 +5,7 @@ const logInReducer = (state = _defaultState, action) => {
 		case "ADD_SESSION" :
 			///new session
 
-			return Object.assign({}, action.data, {userData:true})
+			return action.data
 
 		default: 
 			return state;

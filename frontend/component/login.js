@@ -15,19 +15,19 @@ import store from '../store/store.js'
 	this.setState({[key] : e.target.value})
 	},
 
-	currentUser() {
-		let that = this
-		let data = this.props.id
-		$.ajax({
-		url: '/api/user/:id',
-		method: 'GET',
-		data: "data"
-		})
-	.then(function(response) {
-		console.log("currentUser", response)
-			browserHistory.push("/")
-	})
-	},
+	// currentUser() {
+	// 	let that = this
+	// 	let data = this.props.id
+	// 	$.ajax({
+	// 	url: '/api/user/:id',
+	// 	method: 'GET',
+	// 	data: "data"
+	// 	})
+	// .then(function(response) {
+	// 	console.log("currentUser", response)
+	// 		browserHistory.push("/")
+	// })
+	// },
 
 	render(){
 		 const {email, password} = this.state;

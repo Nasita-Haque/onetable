@@ -12,7 +12,8 @@ import Routes from './react-router/router.jsx';
 
 //ACTION
 import dispatchOpentableInfo from './react-router/route-dispatch.js';
-import currentUser from './react-router/user-dispatch.js'
+import userAuth from '../action/login-action';
+
 //CONTAINERS
 import SignupContainer from "../container/signup-container.js"
 import OpenTableContainer from "../container/opentable-container.js"
@@ -36,5 +37,5 @@ export {
  Login,
  restaurantContainer,
  LoginContainer,
- currentUser
+ userAuth,
 };
