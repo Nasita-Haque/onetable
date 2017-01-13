@@ -21,7 +21,6 @@ const authenticateUser = (req, res) => {
     if(data){
       req.session.userID = data.id;
       req.session.save();
-      console.log(req.session);
       res.send(data);
     } else {
       res.sendStatus(403)

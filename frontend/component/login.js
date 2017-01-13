@@ -4,16 +4,31 @@ import store from '../store/store.js'
 
 	const Login = React.createClass({
 	getInitialState(){
-		return {email: "", password:"" }
+		return {email: "ambar@ambar.com", password:"123" }
 	},
 	handleSubmit(e){
 		e.preventDefault()
 		this.props.login(this.state)
-
+		
 	},
 	handleChange(key, e){
 	this.setState({[key] : e.target.value})
 	},
+
+	// currentUser() {
+	// 	let that = this
+	// 	let data = this.props.id
+	// 	$.ajax({
+	// 	url: '/api/user/:id',
+	// 	method: 'GET',
+	// 	data: "data"
+	// 	})
+	// .then(function(response) {
+	// 	console.log("currentUser", response)
+	// 		browserHistory.push("/")
+	// })
+	// },
+
 	render(){
 		 const {email, password} = this.state;
 		return(
