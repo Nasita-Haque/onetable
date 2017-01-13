@@ -14,37 +14,62 @@ const Signup = React.createClass({
 	},
 	handleSubmit(e){
 		e.preventDefault()
-		console.log(this.state)
 		this.props.signup(this.state)
+		this.props.router.push('/')
 	},
 	handleChange(key, e){
-		console.log(key)
 		this.setState({[key]: e.target.value})
 	},
 	render(){
 		const {firstname, lastname, email, password} = this.state
-		console.log(this.props.signup)
 		return(
 			<div>
-				<form onSubmit={this.handleSubmit} >
-					First name:
-					<input type='text' value={firstname}  onChange={this.handleChange.bind(this,"firstname")}/>
-					<br />
-					Last name:
-					<input type='text' value={lastname} onChange={this.handleChange.bind(this,"lastname")}/>
-					<br />
-					Email:
-					<input type='email' value={email} onChange={this.handleChange.bind(this,"email")} />
-					<br />
-					Password:
-					<input type='Password' value={password} onChange={this.handleChange.bind(this, "password")} />
-					<br /> 
-					<input type='submit' value='Signup!'/>
-				</form>
+				
+
+
+
+<div className='container container1'>	
+			    <div className="row">
+					<div className="col-md-4 col-md-offset-4">
+			    		<div className="panel panel-default">
+						  	<div className="panel-heading">
+						    	<h3 className="panel-title">Register!</h3>
+						 	</div>
+						  	<div className="panel-body">
+								<form className="form-control maindiv1" onSubmit={this.handleSubmit} >
+									<div className="form-group">
+									First name:
+									<input className="form-control" type='text' value={firstname}  onChange={this.handleChange.bind(this,"firstname")}/>
+									</div><br />
+										<div className="form-group">
+									Last name:
+									<input className="form-control" type='text' value={lastname} onChange={this.handleChange.bind(this,"lastname")}/>
+									</div><br />
+										<div className="form-group">
+									Email:
+									<input className="form-control" type='email' value={email} onChange={this.handleChange.bind(this,"email")} />
+									</div><br />
+										<div className="form-group">
+									Password:
+									<input className="form-control" type='Password' value={password} onChange={this.handleChange.bind(this, "password")} />
+									</div><br /> 
+									<input className="btn btn-lg  btn-block button1" type='submit' value='Signup!'/>
+								</form>
+						    </div>
+						</div>
+					</div>
+				</div>
 			</div>
+		</div>
 		)
 	}
 })
 
 
 export default Signup
+
+
+
+
+
+	// <a href="" className="btn btn-lg btn-primary btn-block">Register</a>
