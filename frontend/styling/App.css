@@ -155,4 +155,35 @@ span {
   background: black;
   color: white;
 }
+/*--------------------------------------*/
+/*DisplayRestaurant*/
+
+#siteContainer-displayRes{
+  display: flex;
+  margin-left: 200px;
+  margin-top: 20px;
+  margin-right: 200px;
+  padding-bottom: 20px;
+  width: 775px;
+  border-radius: 10px;
+  border: 5px solid mistyrose;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*--------------------------------------*/
+/*OpenTable*/
+
+#siteContainer-opentable{
+  display: flex;
+  margin-left: 200px;
+  margin-top: 20px;
+  margin-right: 200px;
+  padding-bottom: 20px;
+  width: 775px;
+  border-radius: 10px;
+  border: 5px solid mistyrose;
+  text-align: center;
+  margin-bottom: 20px;
+}
 

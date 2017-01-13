@@ -49,8 +49,10 @@ const Opentable = React.createClass({
 	render(){
 		return(
 			<div>	
-				<DisplayRestaurant />
-				{this.createButton()}
+				<div id='siteContainer-opt'>
+					<DisplayRestaurant />
+					{this.createButton()}
+				</div>
 			</div>
 		)
 	}
