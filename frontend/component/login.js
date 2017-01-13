@@ -7,9 +7,9 @@ import store from '../store/store.js'
 		return {email: "ambar@ambar.com", password:"123" }
 	},
 	handleSubmit(e){
-		e.preventDefault()
+		// e.preventDefault()
 		this.props.login(this.state)
-		
+
 	},
 	handleChange(key, e){
 	this.setState({[key] : e.target.value})
@@ -39,7 +39,7 @@ import store from '../store/store.js'
 					<br />
 					Password:
 					<input type='Password' value={password} onChange={this.handleChange.bind(this, "password")} />
-					<br /> 
+					<br />
 					<input type='submit' value='Login'/>
 				</form>
 			</div>
@@ -49,6 +49,3 @@ import store from '../store/store.js'
 
 
 export default Login
-
-
-

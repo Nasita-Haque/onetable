@@ -1,5 +1,5 @@
 const React = require('react');
-import {Header} from '../index'
+import {Header, Footer} from '../index'
 
 const App = React.createClass({
 	render(){
@@ -7,6 +7,7 @@ const App = React.createClass({
 			<div id='main'>
 				<Header />
 				{this.props.children}
+				<Footer />
 			</div>
 		)
 	}
