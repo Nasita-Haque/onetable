@@ -3,9 +3,10 @@ import {Header, Footer} from '../index'
 
 const App = React.createClass({
 	render(){
+		const {user} = this.props
 		return(
 			<div id='main'>
-				<Header />
+				<Header user={user}/>
 				{this.props.children}
 				<Footer />
 			</div>

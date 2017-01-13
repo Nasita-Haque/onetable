@@ -22,6 +22,7 @@ import OpenTableContainer from "../container/opentable-container.js"
 import confirmationContainer from "../container/confirmation-container.js"
 import restaurantContainer from "../container/restaurants-container"
 import LoginContainer from "../container/login-container"
+import appContainer from "../container/app-container"
 import displayRestaurantContainer from '../container/displayRestaurant-container'
 
 //EXPORT
@@ -42,6 +43,7 @@ export {
  Login,
  restaurantContainer,
  LoginContainer,
+ appContainer,
  displayRestaurantContainer,
  userAuth
 };
