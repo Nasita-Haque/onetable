@@ -6,7 +6,7 @@ const Content = React.createClass({
     console.log(this.props)
     return (
       <div className='content'>
-        <ul>
+        <ul className='images'>
           {this.props.allRestaurants}
         </ul>
       </div>
