@@ -9,16 +9,6 @@ body {
   height: 100vh;
 }
 
-/*-------------------------------------------------*/
-/*NAVBAR*/
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-bottom: 0.1px black solid;
-  /*background-color: skyblue;*/
-}
-
 .content {
   margin-top: 70px;
   display: flex;
@@ -27,6 +17,57 @@ body {
   width: 100%;
   /*background-color: lightyellow;*/
 }
+/*-------------------------------------------------*/
+/*NAVBAR*/
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  height: 120px;}
+
+.logo{
+  margin-left: 12px;
+  margin-top: 10px;
+  height: 80px;
+  width: 270px;
+}
+
+.username{
+  margin-top: 50px;
+  margin-right: 10px;
+  /*border-bottom: 0.1px black solid;*/
+  /*background-color: skyblue;*/
+}
+
+.border{
+  width: 92%;
+  height: 1px;
+  margin-top: 80px;
+  margin-left: 105px;
+  border-bottom: 2px solid black;
+  position: absolute;
+}
+
+/*-------------------------------------------------*/
+/*FOOTER*/
+
+.footer {
+  border-top: 4px solid black;
+  margin-bottom: 100px;
+}
+
+.copyright{
+  margin-left: 340px;
+}
+
+.copyright2{
+  margin-left: 260px;
+}
+
+
+/*-------------------------------------------------*/
+/*HOME*/
 
 img {
   height: 200px;
@@ -53,15 +94,6 @@ span {
   z-index: 99;
 }
 
-/*-------------------------------------------------*/
-/*FOOTER*/
-.footer {
-  background-color: skyblue;
-  height: 300px;
-}
-
-/*-------------------------------------------------*/
-/*HOME*/
 .home {
   display: flex;
   flex-direction: column;
@@ -79,6 +111,7 @@ span {
   border-radius: 10px;
   border: 5px solid mistyrose;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .title-div{
@@ -120,6 +153,37 @@ span {
 
 .confirmation-button:hover{
   background: black;
-  font-color: white;
+  color: white;
 }
-/*WORKS*/
+/*--------------------------------------*/
+/*DisplayRestaurant*/
+
+#siteContainer-displayRes{
+  display: flex;
+  margin-left: 200px;
+  margin-top: 20px;
+  margin-right: 200px;
+  padding-bottom: 20px;
+  width: 775px;
+  border-radius: 10px;
+  border: 5px solid mistyrose;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*--------------------------------------*/
+/*OpenTable*/
+
+#siteContainer-opentable{
+  display: flex;
+  margin-left: 200px;
+  margin-top: 20px;
+  margin-right: 200px;
+  padding-bottom: 20px;
+  width: 775px;
+  border-radius: 10px;
+  border: 5px solid mistyrose;
+  text-align: center;
+  margin-bottom: 20px;
+}
+

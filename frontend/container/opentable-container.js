@@ -4,9 +4,9 @@ import Opentable from "../component/opentable/opentable.js"
 
 const openTableContainer = (state, ownprops) => {
 	return{
-	reservation: state.openTableReducer,
+	reservation: state.openTableReducer.reservation,
 	goto: ownprops.router.push,
-	restaurants: state.restaurantReducer
+	restaurants: state.restaurantReducer,
 	}
 }
 

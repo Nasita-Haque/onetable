@@ -3,6 +3,17 @@ const models = require('../models');
 
 //To enter a post, write i
 
+//find by id
+router.route('/restaurant/:RestaurantId')
+	.get((req,res)=> {
+		models.Restaurant.findOne({
+			where:{
+				id: req.params.RestaurantId
+			}
+		})
+			.then(data => res.send(data))
+			.catch(error => console.log(error))
+	})
 
 router.route('/restaurant')
 	.get((req,res)=>{

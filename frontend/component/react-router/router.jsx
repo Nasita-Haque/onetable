@@ -10,6 +10,7 @@ import {
  confirmationContainer,
  dispatchOpentableInfo,
  LoginContainer,
+ displayRestaurantContainer,
  userAuth
 
 } from '../index';
