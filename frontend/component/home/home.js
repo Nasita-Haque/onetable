@@ -17,7 +17,12 @@ const Home = React.createClass({
     // return output
     return restaurants.map((restaurant, idx) => {
       if(idx < 8) {
-        return (<img key={idx} className={restaurant.name} id={restaurant.id} src={restaurant.img_url} onClick={this.handleClick} />)
+        return (
+          <div>
+            <img key={idx} className={restaurant.name} id={restaurant.id} src={restaurant.img_url} onClick={this.handleClick} />
+            <span>{restaurant.name}</span>
+          </div>
+        )
       }
     })
     // console.log('display', allRestaurants)

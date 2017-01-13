@@ -15,19 +15,21 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: skyblue;
+  border-bottom: 0.1px black solid;
+  /*background-color: skyblue;*/
 }
 
 .content {
+  margin-top: 70px;
   display: flex;
   /*align-items: center;*/
-  height: 70vh;
+  /*height: 70vh;*/
   width: 100%;
-  background-color: lightyellow;
+  /*background-color: lightyellow;*/
 }
 
 img {
-  height: 250px;
+  height: 200px;
   width: 250px;
   padding: 5px;
   padding-bottom: -1.5px;
@@ -36,8 +38,17 @@ img {
 .images {
   display: flex;
   width: 100%;
+  margin-top: 100px;
   flex-wrap: wrap;
   margin-left: 50px;
+  margin-top: -50px;
+}
+
+span {
+  margin-left: -200px;
+  margin-bottom: 950px;
+  color: red;
+  z-index: 99;
 }
 
 /*-------------------------------------------------*/
@@ -110,5 +121,3 @@ img {
   font-color: white;
 }
 /*WORKS*/
-
-
