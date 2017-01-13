@@ -12,7 +12,7 @@ const getUser = (data) => (dispatch) =>{
 		method:'GET',
 		data: data})
 	  .then(function (response) {
-	    console.log("response",response);
+	    console.log("response ",response);
 	    dispatch(addSession(response))
 	  })
 	  .catch(function (error) {
@@ -21,6 +21,25 @@ const getUser = (data) => (dispatch) =>{
 	 return Promise.resolve()
 }
 
+const userAuth = () => (dispatch) => {
+
+	$.ajax({
+		url: '/api/validate/userid', 
+		method:'GET'
+	})
+	  .then(function (response) {
+	    console.log("response=====>",response);
+	    dispatch(addSession(response))
+	  })
+	  .catch(function (error) {
+	    console.log(error);	
+	  });
+	 return Promise.resolve()
+}
+
+
+
 module.exports = {
-	getUser
+	getUser, 
+	userAuth
 }

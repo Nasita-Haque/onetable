@@ -1,6 +1,8 @@
 //COMPONENTS
 import App from './app/app.js';
 import Home from './home/home';
+import Header from './home/header';
+import Footer from './home/footer';
 import Signup from './signup.js';
 import Login from './login.js';
 
@@ -12,6 +14,7 @@ import Routes from './react-router/router.jsx';
 
 //ACTION
 import dispatchOpentableInfo from './react-router/route-dispatch.js';
+import userAuth from '../action/login-action';
 
 //CONTAINERS
 import SignupContainer from "../container/signup-container.js"
@@ -26,6 +29,8 @@ import displayRestaurantContainer from '../container/displayRestaurant-container
 //It will automatically redirect to index.js
 export {
  App,
+ Footer,
+ Header,
  Home,
  Routes,
  store,
@@ -37,5 +42,6 @@ export {
  Login,
  restaurantContainer,
  LoginContainer,
- displayRestaurantContainer
+ displayRestaurantContainer,
+ userAuth
 };

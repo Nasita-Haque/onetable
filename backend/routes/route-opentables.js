@@ -66,13 +66,13 @@ router.route('/opentable/:RestaurantId')
 	})
 
 	///PUT///
-router.route('/opentable/:RestaurantId')
+router.route('/opentable/:OpentableId')
 	.put((req, res) => {
 		OpenTable.update({
 			availability:false
 		}, {
 			where:{
-				id:req.params.RestaurantId
+				id:req.params.OpentableId
 			}
 		})
 	.then(data => res.status(200))

@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #id {
@@ -8,24 +9,117 @@ body {
   height: 100vh;
 }
 
+/*-------------------------------------------------*/
+/*NAVBAR*/
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 0.1px black solid;
+  /*background-color: skyblue;*/
+}
+
+.content {
+  margin-top: 70px;
+  display: flex;
+  /*align-items: center;*/
+  /*height: 70vh;*/
+  width: 100%;
+  /*background-color: lightyellow;*/
+}
+
+img {
+  height: 200px;
+  width: 250px;
+  padding: 5px;
+  padding-bottom: -1.5px;
+  border-radius: 15px;
+}
+
+.images {
+  display: flex;
+  width: 100%;
+  margin-top: 100px;
+  flex-wrap: wrap;
+  margin-left: 110px;
+  margin-top: -50px;
+}
+
+span {
+  position: absolute;
+  margin-left: -200px;
+  padding-bottom: -450px;
+  color: red;
+  z-index: 99;
+}
+
+/*-------------------------------------------------*/
+/*FOOTER*/
+.footer {
+  background-color: skyblue;
+  height: 300px;
+}
+
+/*-------------------------------------------------*/
+/*HOME*/
 .home {
   display: flex;
   flex-direction: column;
   align-items: space-around;
 }
 
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: skyblue;
+/*-------------------------------------------------*/
+/*CONFIRMATION*/
+.confirmation-main-div{
+  margin-left: 200px;
+  margin-top: 20px;
+  margin-right: 200px;
+  padding-bottom: 20px;
+  width: 775px;
+  border-radius: 10px;
+  border: 5px solid mistyrose;
+  text-align: center;
 }
 
-.content {
-  height: 70vh;
+.title-div{
+  font-size: 50px;
+  text-align: center;
 }
 
-.footer {
-  background-color: skyblue;
-  height: 300px;
+.opentable-div{
+  background-color: #ffcdc7;
+  margin-left: 190px;
+  /*padding-left: 50px;*/
+  padding-top: 3px;
+  padding-bottom: 25px;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 5px 5px 5px #888888;
 }
+
+.info-title{
+  font-size: 25px;
+  text-weight: bold;
+}
+
+.confirmation-button{
+  font-size: 17px;
+  text-align: center;
+  border-radius:40px;
+  outline:none;
+  letter-spacing:1px;
+  text-shadow:0;
+  background: #fff;
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.p-tag{
+  font-size: 20px;
+}
+
+.confirmation-button:hover{
+  background: black;
+  font-color: white;
+}
+/*WORKS*/

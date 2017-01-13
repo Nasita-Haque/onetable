@@ -4,11 +4,14 @@ import store from '../store/store.js'
 
 	const Login = React.createClass({
 	getInitialState(){
-		return {email: "", password:"" }
+		return {email: "ambar@ambar.com", password:"123" }
 	},
 	handleSubmit(e){
-		e.preventDefault()
+		 e.preventDefault()
 		this.props.login(this.state)
+
+		this.props.router.push('/')
+		
 
 	},
 	handleChange(key, e){
@@ -16,6 +19,7 @@ import store from '../store/store.js'
 	},
 	render(){
 		 const {email, password} = this.state;
+		 console.log("PROPS ==========>", this.props)
 		return(
 			<div>
 				<form onSubmit={this.handleSubmit} >
@@ -24,7 +28,7 @@ import store from '../store/store.js'
 					<br />
 					Password:
 					<input type='Password' value={password} onChange={this.handleChange.bind(this, "password")} />
-					<br /> 
+					<br />
 					<input type='submit' value='Login'/>
 				</form>
 			</div>
@@ -34,6 +38,3 @@ import store from '../store/store.js'
 
 
 export default Login
-
-
-
